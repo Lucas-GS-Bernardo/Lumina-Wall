@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mural Digital</title>
+    <link rel="shortcut icon" href="data:,">
+    <style>
+        html, body { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            background-color: #000 !important; 
+            overflow: hidden; 
+        }
+
+        #mural-container { 
+            position: relative;
+            width: 100%; height: 100%; 
+            background: black; 
+        }
+
+        .slide { 
+            position: absolute;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh; 
+            object-fit: contain; 
+            background: black;
+            opacity: 0;
+            transition: opacity {{ (config.tempo_transicao if config and config.tempo_transicao else 1500)|int }}ms ease-in-out;
+        }
+        .active { opacity: 1; z-index: 10; }
+
+        /* --- NOTIFICAÇÃO ESTILO XBOX --- */
+        #achievement-popup {
+            display: none;
+            position: fixed;
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 350px;
+            width: fit-content;
+            z-index: 99999;
+            transition: top 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.6));
+        }
+
+        #achievement-popup.show { top: 40px; display: block; }
+
+        .pop-top {
+            background: white;
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 15px 15px 0 0; 
+        }
+
+        .pop-icon {
+            background: #ff6600;
+            width: 65px; height: 65px;
+            border-radius: 15px;
+            display: flex; justify-content: center; align-items: center;
+            margin-right: 18px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
+        }
+
+        .pop-icon img { width: 40px; height: 40px; }
+
+        #achievement-popup.show .pop-icon img {
+            animation: balancarSino 0.5s ease-in-out infinite;
+            transform-origin: top center;
+        }
+
+        @keyframes balancarSino {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(15deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-15deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .pop-msg {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .pop-bottom {
+            background: #e65c00;
+            color: white;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 0 0 15px 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Aviso de Áudio Inicial */
+        #audio-unlock {
+            position: fixed; bottom: 20px; right: 20px;
+            background: rgba(255, 102, 0, 0.9);
+            color: white; padding: 15px; border-radius: 10px;
+            font-family: sans-serif; z-index: 100000;
+            cursor: pointer; animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+	<audio id="som-mural" src="{{ url_for('servir_sounds', filename='sound-notification.wav') }}" preload="auto"></audio>
+
+    <div id="achievement-popup">
+        <div class="pop-top">
+            <div class="pop-icon">
+                <img src="{{ url_for('static', filename='Images/sino-notification.png') }}" alt="Sino">
+            </div>
+            <p class="pop-msg" id="pop-msg">Atualizando Mural...</p>
+        </div>
+        <div class="pop-bottom" id="pop-status">Sincronizando</div>
+    </div>
+
+    <div id="mural-container">
+    {% for arq in arquivos %}
+        {% if arq.filename.lower().endswith(('.mp4', '.mov', '.avi')) %}
+            
+            <!-- ALTERADO DE 'metadata' PARA 'auto' -->
+			<video src="{{ url_for('static', filename='uploads/' + arq.filename) }}" class="slide" muted preload="auto"></video>
+
+        {% else %}
+            <img src="{{ url_for('static', filename='uploads/' + arq.filename) }}" class="slide" data-tempo="{{ arq.tempo * 1000 }}">
+        {% endif %}
+    {% endfor %}
+</div>
+
+<script>
+    let index = 0;
+    let slides = document.querySelectorAll('.slide');
+    let timer;
+    let minhaVersaoLocal = null; // Versão que está rodando agora na tela
+
+    window.onload = () => {
+        console.log("🚀 Mural Iniciado");
+        showSlide();
+        sincronizar(); // Inicia o loop
+		document.addEventListener('click', function() {
+    const som = document.getElementById('som-mural');
+    som.play().then(() => {
+        som.pause();
+        som.currentTime = 0;
+        console.log("🔊 Áudio desbloqueado com sucesso!");
+    }).catch(e => console.log("Aguardando interação..."));
+}, { once: true });
+    };
+
+    function showSlide() {
+    slides = document.querySelectorAll('.slide'); 
+    if (slides.length === 0) return;
+
+    let anterior = slides[index];
+
+    slides.forEach((s, i) => {
+        if (i !== index) {
+            s.classList.remove('active');
+            if (s.tagName === 'VIDEO') { 
+                s.pause(); 
+            }
+        }
+    });
+
+    if (index >= slides.length) index = 0;
+    let atual = slides[index];
+    atual.classList.add('active');
+
+    if (atual.tagName === 'VIDEO') {
+        // Zera o tempo APENAS no momento de dar o play na mídia da vez
+        atual.currentTime = 0;
+        atual.play().catch(() => proximo());
+        atual.onended = () => proximo();
+    } else {
+        let tempo = parseInt(atual.getAttribute('data-tempo')) || 7000;
+        clearTimeout(timer);
+        timer = setTimeout(proximo, tempo);
+    }
+}
+
+    function proximo() {
+        index = (index + 1) % slides.length;
+        showSlide();
+    }
+
+    // A ÚNICA FUNÇÃO DE VERIFICAÇÃO QUE VOCÊ PRECISA:
+    function sincronizar() {
+        // O timestamp ?t= garante que o celular não use cache
+        fetch('/verificar_mudancas?t=' + new Date().getTime())
+            .then(res => res.json())
+            .then(data => {
+                // Primeira vez: apenas descobre qual é a versão do servidor
+                if (minhaVersaoLocal === null) {
+                    minhaVersaoLocal = data.versao;
+                    return;
+                }
+
+                // Se a versão do servidor mudou, alguém apertou o botão!
+                if (data.versao > minhaVersaoLocal) {
+                    console.log("🔔 Nova versão detectada: " + data.versao);
+                    minhaVersaoLocal = data.versao; // Atualiza a versão local ANTES de tudo
+
+                    if (data.tipo === 'nova_midia') {
+                        mostrarNotificacao("NOVO CONTEÚDO!", "RECEBIDO COM SUCESSO", true);
+                    } else {
+                        mostrarNotificacao("ATUALIZANDO MURAL", "SINCRONIZANDO DADOS...", false);
+                    }
+
+                    // Aguarda o popup aparecer e atualiza as mídias
+                    setTimeout(atualizarConteudoSilencioso, 3000);
+                }
+            })
+            .catch(err => console.log("Erro de conexão"));
+    }
+
+    function atualizarConteudoSilencioso() {
+        fetch('/') 
+            .then(res => res.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const novoConteudo = doc.getElementById('mural-container').innerHTML;
+                document.getElementById('mural-container').innerHTML = novoConteudo;
+                index = 0;
+                clearTimeout(timer);
+                showSlide();
+            });
+    }
+
+    function mostrarNotificacao(mensagem, subtexto, tocarSom = false) {
+        const popup = document.getElementById('achievement-popup');
+        const som = document.getElementById('som-mural');
+        document.getElementById('pop-msg').innerText = mensagem;
+        document.getElementById('pop-status').innerText = subtexto;
+        
+        popup.classList.add('show');
+        if (tocarSom && som) {
+            som.currentTime = 0;
+            som.play().catch(e => console.log("Áudio bloqueado. Toque na tela uma vez."));
+        }
+        setTimeout(() => popup.classList.remove('show'), 4500);
+    }
+
+    // Verifica a cada 5 segundos
+    setInterval(sincronizar, 5000);
+</script>
+</body>
+</html>

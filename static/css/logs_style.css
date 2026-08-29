@@ -1,0 +1,177 @@
+:root {
+            --primary: #2c3e50;
+            --secondary: #f39c12;
+            --bg: #f4f7f6;
+            --text: #333;
+            --white: #ffffff;
+            --border: #ddd;
+}
+
+body { 
+			font-family: sans-serif; 
+			background: #f4f7f6; 
+			padding: 20px; 
+			margin: 0; 
+}
+        
+.container { 
+			 max-width: 800px; 
+			 margin: auto;
+			 flex: 0.1px; /* Empurra o footer para baixo */
+			 padding: 3px;  
+}
+
+.container-title { 
+			max-width: 800px; 
+            margin: 20px auto;
+            border-radius: 15px;
+}
+        
+.header-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+}
+
+h2 { 
+			border-bottom: 1px solid #ddd; 
+			padding-bottom: 10px; 
+			color: #333; 
+}
+
+.btn { 
+			text-decoration: none; 
+			padding: 8px 15px; 
+			border-radius: 4px; 
+			color: white; 
+			font-weight: bold; 
+			font-size: 13px; 
+}
+
+.btn-audit { 
+			background-color: #8e44ad; 
+			margin-left: 10px; 
+} /* Roxo para Auditoria */
+
+.voltar { 
+	text-decoration: none; 
+	color: var(--primary); 
+	font-weight: bold; 
+	display: inline-block; 
+	margin-bottom: 20px; 
+}
+
+.card { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    margin-bottom: 20px; 
+    border-left: 5px solid var(--secondary); 
+}
+
+.btn-voltar:hover { 
+			color: var(--secondary);
+			transform: translateX(-5px);
+}
+
+.table-container { 
+            overflow-x: auto; 
+            background: var(--white);
+            border-radius: 8px;
+}
+
+table { 
+			width: 100%; 
+			border-collapse: collapse; 
+			margin-top: 10px; 
+}
+
+th, td { 
+			padding: 12px; 
+			border-bottom: 1px solid #eee; 
+			text-align: left; 
+			font-size: 14px; 
+}
+
+th { 
+			background-color: #f8f9fa; 
+			color: #555; 
+}
+
+        /* CORREÇÃO DO HOVER: Azul suave, mantendo o texto escuro */
+tr:hover { 
+			background-color: #f1f1f1; 
+}
+
+.user-badge { 
+            background: #eef2f7; 
+            color: #2980b9; 
+            padding: 5px 10px; 
+            border-radius: 20px; 
+            font-weight: 600; 
+            font-size: 11px; 
+            border: 1px solid #d6eaf8;
+}
+        
+.time-info { 
+            color: #888; 
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px; 
+}
+
+.acao-texto {
+            line-height: 1.5;
+            font-weight: 400;
+}
+
+        /* Estilo para quando a linha contém informação de Upload/Mídia */
+.log-upload {
+            color: #27ae60;
+            font-weight: 600;
+}
+
+.btn-download {
+			background-color: #27ae60;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: bold;
+			transition: 0.3s;
+}
+
+.btn-download:hover {
+			background-color: #219150;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-txt { 
+			background-color: #27ae60; 
+}
+
+.version-footer {
+			width: 100%;
+			text-align: center;
+			padding: 10px 0;
+			opacity: 0.7 !important; /* Opacidade que você quer */
+}
+
+.version-footer p {
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.top-bar { 
+			 display: flex; 
+			 justify-content: space-between; 
+			 margin-bottom: 20px; 
+			 align-items: center; 
+ }

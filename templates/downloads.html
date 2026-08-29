@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 Central de Downloads - Lumina Wall</title>
+    <link rel="stylesheet" href="/templates_static/admin_style.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/central_downloads.css') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='brand/favicon.svg') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>📁 Arquivos de Registro</h2>
+        <a href="/logs" class="btn-voltar">⬅ Voltar aos Registros</a>
+    </div>
+
+    <ul class="log-list">
+        {% if logs %}
+            {% for log in logs %}
+            <li class="log-item">
+                <div class="log-info">
+                    <span class="log-name">📄 {{ log.label }}</span>
+                    <span class="log-file-name">{{ log.nome }}</span>
+                </div>
+                <a href="{{ url_for('baixar_log', nome_arquivo=log.nome) }}" class="btn-download">
+                    <span>📥</span> Baixar TXT
+                </a>
+            </li>
+            {% endfor %}
+        {% else %}
+            <div class="empty-state">
+                <p>Nenhum arquivo de log foi gerado ainda.</p>
+            </div>
+        {% endif %}
+    </ul>
+</div>
+
+	{% include 'footer.html' %}
+
+</body>
+</html>

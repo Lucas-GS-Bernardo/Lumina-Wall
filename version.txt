@@ -1,0 +1,219 @@
+🧾 CHANGELOG — Mural Digital EANIG
+Versão 1.0.6-rc.4 — Codinome “Jaspe”
+(Release Candidate final antes da versão estável 1.0.6)
+
+⭐ Visão Geral
+Esta release é a maior atualização já feita no módulo de administração do Mural Digital EANIG.
+Foi implementada uma renovação completa da experiência do usuário no painel, tornando-o mais rápido, mais seguro, mais estável e principalmente sem recarregamentos desnecessários.
+Inclui também um sistema robusto de regras para controle de vídeos, proteção contra ações indevidas, logs completos e garantia de sincronização confiável entre o painel e as TVs.
+
+🆕 Novidades Principais
+1) ✨ Botões de EXIBIR/OCULTAR agora funcionam via AJAX (sem reload)
+
+
+A partir desta versão, clicar em EXIBINDO → OCULTO ou OCULTO → EXIBINDO não recarrega a página.
+
+
+O estado muda instantaneamente no próprio botão.
+
+
+O backend retorna:
+JSON{"ok": true, "novo_estado": 0|1}Mostrar mais linhas
+ [mailadvent...epoint.com]
+
+
+Toda mudança gera um log detalhado com:
+
+ícone de ação
+nova situação (EXIBINDO/OCULTO)
+legenda da mídia
+arquivo envolvido
+Exemplo de log gerado:
+
+👀EXIBINDO: Título da mídia
+Legenda: Título da mídia | Arquivo: nome.mp4
+
+ [mailadvent...epoint.com]
+
+
+
+2) 🔒 Nova Regra Oficial: Vídeo só pode ser excluído após sincronização
+Agora existe um ciclo obrigatório para vídeos:
+
+EXIBINDO → clicar OCULTAR
+Painel marca o card com data-awaiting-sync-delete="1" (pendente de liberação)
+ATUALIZAR NA TV
+Só após confirmação da sincronização o botão EXCLUIR é liberado
+
+⚡ Isso impede:
+
+exclusão acidental enquanto o vídeo ainda está rodando na TV
+inconsistências na lista de mídias ativas
+falhas de sincronização visual entre painel e mural
+
+Lógica incluída no card HTML + JS e confirmada no backend:
+ [mailadvent...epoint.com], [mailadvent...epoint.com]
+
+3) 🔄 ATUALIZAR NA TV agora tem Anti‑Spam (bloqueio de clique duplo)
+
+Enquanto a requisição está indo para /forcar_update, o botão não pode ser clicado novamente.
+Impede flood de requisições e possíveis desyncs.
+Backend atualiza mural_status["versao"] e classifica o tipo do update para as TVs.
+Exemplo:
+Pythonmural_status["tipo"] = "nova_midia"  # ou "manual"Mostrar mais linhas
+ [mailadvent...epoint.com]
+
+
+4) 📝 Edição Inline de Legenda (sem recarregar)
+
+Clicar na legenda → vira um campo editável.
+Enter ou perder o foco → salva.
+AJAX chama:
+POST /atualizar_legenda/<filename>
+
+e atualiza instantaneamente a legenda.
+Log gerado automaticamente.
+ [mailadvent...epoint.com]
+
+
+5) ⏱ Salvar Tempo da Imagem via AJAX
+
+Botão “SALVAR ALTERAÇÃO” não recarrega mais a página.
+Atualiza apenas o card.
+Backend:
+POST /atualizar_tempo/<filename>
+
+gera log:
+⏱ Tempo alterado: <legenda>
+Arquivo: X | Novo tempo: Xs
+
+ [mailadvent...epoint.com]
+
+
+6) 🧹 Reordenar cards por número (com troca automática)
+
+Modo reordenação cria select “Posição”.
+Escolher nova posição troca automaticamente com outro card.
+Salvar envia uma única chamada:
+POST /reordenar { ordem: [ids...] }
+
+ [mailadvent...epoint.com]
+
+Nenhum reload é necessário.
+
+7) 🚀 Upload com barra de progresso real (XHR)
+
+Enquanto o arquivo sobe:
+
+barra progride
+MB enviados/total aparecem
+
+
+Após concluir, recarrega somente o painel (para aparecer o novo card).
+ [mailadvent...epoint.com]
+
+
+8) 🗑 Excluir mídia via AJAX (com modal ou sem modal)
+
+Agora a exclusão:
+
+não causa reload
+remove o card da tela imediatamente
+respeita a regra especial para vídeos
+
+
+Backend:
+POST /deletar/<filename>
+
+retorna JSON e gera log “🗑 Exclusão”.
+ [mailadvent...epoint.com]
+
+
+🐞 Correções Críticas
+1) ❌ Bug do decorator órfão no toggle
+Um @app.route('/toggle/...') antes da rota /logs sobrescrevia a função correta.
+Foi removido.
+Agora o toggle funciona 100%.
+ [mailadvent...epoint.com]
+
+2) ✔ Correção na definição de tempo no upload
+Antes:
+
+cálculo era sobrescrito por tempo = request.form.get('tempo')
+vídeos poderiam não receber 0 corretamente
+
+Agora:
+
+Vídeo → tempo = 0 garantido
+Imagem → usa valor informado ou 10
+ [mailadvent...epoint.com]
+
+
+3) ✔ Logs mais completos
+
+Todas as ações críticas agora geram logs com contexto:
+
+Login/logout
+Upload
+Alteração de tempo
+Alteração de legenda
+Toggle exibição
+Exclusão
+Atualizar mural
+ [mailadvent...epoint.com]
+
+
+
+
+🔐 Melhorias de Segurança
+
+Todas as rotas sensíveis são POST.
+Sessão validada via before_request.
+Auditoria e logs extensivos.
+Exclusão de vídeo exige dois passos (Ocultar + Atualizar TV).
+ [mailadvent...epoint.com]
+
+
+⚙ Melhorias Internas do Backend
+
+obter_midias() agora converte tempos automaticamente para ms (necessário às TVs).
+Sincronização via mural_status centralizado.
+Melhoria na criação do banco e migrações.
+ [mailadvent...epoint.com]
+
+
+📦 API Estável para TVs
+
+/forcar_update marca mudança e retorna versao.
+/verificar_mudancas entrega estado atual sem limpar variáveis.
+/obter_midias retorna apenas mídias ativas com informações completas.
+ [mailadvent...epoint.com]
+
+
+🟩 Checklist de Aceite da versão rc.4
+Funcionalidades
+
+ Ocultar vídeo marca card para sincronização
+ ATUALIZAR NA TV libera EXCLUIR vídeos ocultos
+ EXIBIR/OCULTAR (AJAX)
+ Salvar Tempo (AJAX)
+ Editar Legenda (AJAX)
+ Excluir (AJAX)
+ Reordenar cards
+ Upload com progresso
+ Logs completos
+
+Backend
+
+ toggle() unificada
+ deletar() com regra de vídeo exibindo
+ atualizar_tempo() corrigida
+ registrar_log() funcionando
+ forcar_update() estável
+
+UI/UX
+
+ botões sem recarregar
+ anti-spam do ATUALIZAR
+ feedback visual consistente
+

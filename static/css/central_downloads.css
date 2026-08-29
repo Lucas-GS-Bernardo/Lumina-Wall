@@ -1,0 +1,136 @@
+:root {
+            --primary: #2c3e50;
+            --secondary: #f39c12;
+            --success: #27ae60;
+            --bg: #f4f7f6;
+            --white: #ffffff;
+}
+
+body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            padding: 20px;
+}
+
+.container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            background: var(--white); 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+
+.header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+}
+
+h2 {
+			color: var(--primary);
+			margin: 0;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+}
+
+.btn-voltar { 
+            text-decoration: none; 
+            color: var(--primary); 
+            font-weight: bold; 
+            transition: 0.3s;
+}
+
+.btn-voltar:hover {
+			color: var(--secondary);
+}
+
+.log-list {
+			list-style: none; 
+			padding: 0;
+}
+
+.log-item {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            margin-bottom: 12px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.log-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-color: var(--secondary);
+}
+
+.log-info {
+			display: flex;
+			flex-direction: column;
+}
+        
+.log-name { 
+            font-weight: 600; 
+            color: var(--primary); 
+            font-size: 16px;
+}
+
+.log-file-name { 
+            font-size: 12px; 
+            color: #888; 
+            font-family: 'Courier New', Courier, monospace;
+}
+
+        /* O BOTÃO BONITÃO */
+.btn-download {
+            background-color: var(--success);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);
+}
+
+.btn-download:hover {
+            background-color: #219150;
+            box-shadow: 0 6px 12px rgba(39, 174, 96, 0.3);
+            transform: scale(1.05);
+}
+
+.btn-download:active {
+            transform: scale(0.98);
+}
+
+.empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+}
+
+.version-footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0.7 !important; /* Opacidade que você quer */
+}
+
+.version-footer p {
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+}

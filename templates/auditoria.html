@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Auditoria e Logs - {{ current_version }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auditoria_style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="audit-header">
+        <div>
+            <h1 style="margin:0;">🔍 Auditoria do Sistema</h1>
+            <p style="margin:5px 0 0; color: #666;">Registros detalhados de atividades e segurança</p>
+        </div>
+        <a href="{{ url_for('logs') }}" class="btn-back">Voltar para Logs</a>
+		<a href="{{ url_for('baixar_auditoria') }}" class="btn-download">
+        📥 Baixar Log Completo (CSV)
+    </a>
+    </div>
+
+    <div class="log-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>🕒 Data / Hora</th>
+                    <th>👤 Usuário</th>
+                    <th>⚡ Ação</th>
+                    <th>⚠️ Severidade</th>
+                    <th>🌐 IP / Origem</th>
+                    <th>📝 Detalhes do Evento</th>
+                </tr>
+            </thead>
+            <tbody>
+    {% for log in logs %}
+    <tr>
+        <td>{{ log.data_hora }}</td>
+        <td>
+            <span class="user-tag">{{ log.usuario_nome }}</span><br>
+            <small style="color: #999;">ID: {{ log.usuario_id }}</small>
+        </td>
+        <td> <strong>{{ log.acao }}</strong> </td> 
+		<td>
+			{% if log.severidade|upper == 'SUCCESS' %}
+				<span class="badge bg-success">Sucesso</span>
+			{% elif log.severidade|upper == 'DANGER' %}
+				<span class="badge bg-danger">Perigo</span>
+			{% elif log.severidade|upper == 'WARNING' %}
+				<span class="badge bg-warning text-dark">Aviso</span>
+			{% elif log.severidade|upper == 'INFO' %}
+				<span class="badge bg-info text-white">Informação</span>
+			{% endif %}
+			
+		</td>
+        <td class="ip-addr">
+            {{ log.ip_address }}<br>
+            <span title="{{ log.user_agent }}" style="cursor:help; font-size: 0.8rem; color: #666;">📄 Ver Device</span>
+        </td>
+        <td>
+            {% if log.detalhes %}
+                <code style="background: #f8f9fa; padding: 2px 5px; border-radius: 4px; color: #d63384; font-size: 0.85rem;">
+                    {{ log.detalhes }}
+                </code>
+            {% else %}
+                <span style="color: #ccc;">---</span>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</tbody>
+        </table>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+
+</body>
+</html>

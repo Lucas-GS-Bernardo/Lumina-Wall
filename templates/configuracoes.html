@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Lumina Wall</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/config_style.css') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='brand/favicon.svg') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <a href="/admin" class="voltar">⬅ Voltar ao Painel</a>
+    <h2>⚙️ Configurações do Sistema</h2>
+
+    <div class="card">
+        <h3>🔧 Ajustes do Mural</h3>
+        <form action="/atualizar_configuracoes" method="POST">
+            <div class="form-group">
+                <label>Nome da Escola / Instituição:</label>
+                <input type="text" name="nome_escola" value="{{ config.nome_escola }}" placeholder="Ex: Escola Adventista de Nova Iguaçu">
+            </div>
+            <div class="form-group">
+				<label>Tempo Padrão de Transição (segundos):</label>
+				<input type="number" name="tempo_transicao" value="{{ config.tempo_transicao }}" min="1">
+			</div>
+            <button type="submit" class="btn-salvar">💾 Salvar Alterações</button>
+        </form>
+    </div>
+
+    <div class="card" style="border-left-color: var(--success);">
+        <h3>💾 Segurança e Backup do Banco</h3>
+        <p>O arquivo <strong>mural.db</strong> é o "cérebro" do seu sistema. Ao baixá-lo, você salva:</p>
+        
+        <div class="db-info">
+            <strong>O que contém neste backup:</strong>
+            <ul>
+                <li>✅ <strong>Mídias:</strong> O registro de todas as fotos/vídeos e suas legendas.</li>
+                <li>✅ <strong>Usuários:</strong> Todos os logins, senhas (criptografadas) e cargos.</li>
+                <li>✅ <strong>Logs:</strong> O histórico completo de quem fez o quê no sistema.</li>
+                <li>✅ <strong>Configurações:</strong> O nome da escola e tempos definidos.</li>
+            </ul>
+            <p><small>*Nota: O backup não contém os arquivos de imagem físicos, apenas os dados cadastrados no banco.</small></p>
+        </div>
+        
+        <br>
+        <a href="{{ url_for('central_downloads', arquivo='mural.db') }}" class="btn-backup">
+            📥 Baixar Arquivo mural.db
+        </a>
+    </div>
+</div>
+
+
+{% include 'footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Acesso - Lumina Wall</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_style.css') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='brand/favicon.svg') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header-box" >
+    <img
+        src="{{ url_for('static', filename='brand/Logo_Lumina3.png') }}"
+        alt="Lumina Wall — Comunicação que ilumina"
+        class="brand-img"
+        width="300"
+        height="auto"
+        decoding="async"
+        loading="eager">
+        </div>
+        
+        <form method="POST" action="/login" class="login-form">
+    <div class="form-group">
+        <label>USUÁRIO:</label>
+        <input type="text" name="username" placeholder="Seu nome de usuário" required>
+    </div>
+    
+    <div class="form-group">
+        <label>SENHA:</label>
+        <input type="password" name="password" placeholder="Sua senha" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+</form>
+        
+        {% if erro %}
+			<p class="error-message">{{ erro }}</p>
+		{% endif %}
+    </div>
+	
+		{% include 'footer.html' %}
+	
+</body>
+</html>

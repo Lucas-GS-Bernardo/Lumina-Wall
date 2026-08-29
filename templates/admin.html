@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Lumina Wall</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_style.css') }}">
+ <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='brand/favicon.svg') }}">
+</head>
+<body>
+<div class="container-btn-guia">
+ <button onclick="abrirGuia()" class="btn-ajuda-flutuante">
+ <span class="icon-livro">📖</span> GUIA DE USO
+ </button>
+</div>
+    <audio id="som-sucesso" src="/sounds/som-sucess.wav" preload="auto"></audio>
+
+ <!-- Modal de Excluir -->
+ <div id="deleteModal" class="modal-overlay">
+   <div class="modal-content">
+     <div class="modal-icon" style="font-size: 50px;">⚠️</div>
+     <h2 style="margin-top: 10px;">Tem certeza?</h2>
+     <p style="color: #666;">Deseja realmente excluir esta mídia? Esta ação não pode ser desfeita.</p>
+     <div class="modal-buttons">
+       <button onclick="closeDeleteModal()" class="btn-cancel">Cancelar</button>
+       <a id="confirmDeleteBtn" href="#" class="btn-confirm">Sim, Excluir</a>
+     </div>
+   </div>
+ </div>
+
+ <!-- Modal Guia -->
+    <div id="guiaModal" class="modal-guia">
+        <div class="modal-content-guia">
+            <div class="modal-header-guia">
+                <span class="close-guia-btn" onclick="fecharGuia()">×</span>
+                <h2>📖 MANUAL DO USUÁRIO</h2>
+            </div>
+            <div class="modal-body-guia">
+                <div class="guia-item">
+                    <h3><span class="icon-negativo">🚫</span> O que evitar</h3>
+                    <ul>
+                        <li><strong>Vídeos 4K ou Brutos:</strong> Travam a rede. Use arquivos otimizados.</li>
+                        <li><strong>Nomes Complexos:</strong> Evite @, #, $ ou acentos nos nomes dos arquivos.</li>
+                        <li><strong>Mídias repetidas:</strong> Remova o que não estiver mais em uso para poupar o disco.</li>
+                    </ul>
+                </div>
+                <div class="guia-item">
+                    <h3><span class="icon-positivo">✅</span> Recomendações</h3>
+                    <ul>
+                        <li><strong>Formato:</strong> Sempre prefira vídeos em <strong>MP4 (H.264)</strong>.</li>
+                        <li><strong>Peso:</strong> Imagens até 2MB e Vídeos até 50MB são ideais.</li>
+                        <li><strong>Sincronia:</strong> O mural leva até 5s para ler novas ordens.</li>
+                        <li><strong>Legenda dos Cards</strong> Limite de 50 caracteres mantido para legenda</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer-guia">
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+
+ <!-- Menu -->
+ <div class="menu">
+        <div class="menu-content"> <div class="menu-links">
+ <a href="/admin" class="btn">🏠 Início</a>
+ {% if session['role'] == 'admin' %}
+ <a href="{{ url_for('gerenciar_usuarios') }}" class="btn">👥 Gerenciar Usuários</a>
+ <a href="{{ url_for('configuracoes') }}" class="btn">⚙️ Configurações</a>
+ <a href="{{ url_for('logs') }}" class="btn">📜 Ver Logs</a>
+ {% endif %}
+ </div>
+ <div class="user-info">
+ <span>Logado como: <strong>{{ session['username'] }}</strong></span>
+ <a href="/logout" class="click-btn btn-style2">🚪 Sair</a>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+        <div class="header-box">
+ <div class="header-info">
+ 
+<img
+        src="{{ url_for('static', filename='brand/Logo_Lumina.png') }}"
+        alt="Lumina Wall — Comunicação que ilumina"
+        class="brand-img"
+        width="260"
+        height="auto"
+        decoding="async"
+        loading="eager">
+ </div>
+ <div class="header-actions">
+            <button onclick="solicitarSincronizacao()" class="btn-sync" id="btnSync">
+                🔄 ATUALIZAR NA TV
+            </button>
+ <a href="{{ url_for('mural') }}" target="_blank" class="btn-view">
+ <span>👁️</span> VER MURAL
+ </a>
+ </div>
+ </div>
+
+ <!-- Stats -->
+ <div class="stats-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 20px;">
+ <div class="stat-card {{ 'limit-exceeded' if n_img > 5 else '' }}">
+ <span class="stat-icon">🖼️</span>
+ <div class="stat-info">
+ <span class="stat-value">{{ n_img }}/5</span>
+ <span class="stat-label">Imagens Ativas</span>
+ </div>
+ </div>
+ <div class="stat-card {{ 'limit-exceeded' if n_vid > 3 else '' }}">
+ <span class="stat-icon">🎬</span>
+ <div class="stat-info">
+ <span class="stat-value">{{ n_vid }}/3</span>
+ <span class="stat-label">Vídeos Ativos</span>
+ </div>
+ </div>
+</div>
+
+<!-- Upload -->
+<div class="upload-section" style="margin-bottom: 2px;">
+        <div class="upload-header">
+            <span class="upload-icon">🚀</span>
+            <h3>Novo Conteúdo</h3>
+        </div>
+        <form onsubmit="document.getElementById('btnEnviar').innerHTML='🚀 ENVIANDO...'; document.getElementById('btnEnviar').style.pointerEvents='none';"
+             action="/admin" method="post" enctype="multipart/form-data" class="upload-form-grid">
+            <div class="form-group">
+                <label>Mídia <span class="required-mark">*</span></label>
+                <label for="arquivo_input" class="custom-file-upload" id="label-arquivo">
+                    <span class="file-text" id="btn-text">📁 Selecionar Mídia</span>
+                </label>
+                <input type="file" name="arquivo" id="arquivo_input"
+                 onchange="atualizarBotao(this)" required style="display: none;"
+                 accept="image/*,video/mp4,video/x-m4v,video/*">
+            </div>
+            <div class="form-group">
+                <label for="legenda">Legenda da Mídia (Obrigatório):</label>
+                <input type="text" name="legenda" required maxlength="50" placeholder="Ex: Aviso Reunião">
+            </div>
+            <div class="form-group time-group" id="containerTempo">
+                <label for="tempo">Tempo (s)</label>
+                <input type="number" name="tempo" id="tempo" value="10" min="1" class="form-control">
+            </div>
+            <div class="form-group btn-container">
+                <button type="submit" id="btnEnviar" class="btn-primary">ENVIAR</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Overlay de upload (abre durante o envio) -->
+    <div id="uploadOverlay" class="upload-overlay" aria-hidden="true" role="dialog" aria-label="Enviando arquivo">
+     <div class="upload-box">
+        <h3 class="upload-title">Enviando mídia…</h3>
+        <p class="upload-sub">Não feche esta janela. Para vídeos grandes, o envio pode levar alguns minutos.</p>
+        <div class="progress-wrap">
+         <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div class="progress-info">
+         <span id="progressPct" class="progress-pct">0%</span>
+         <span id="progressMeta">0 MB de 0 MB</span>
+        </div>
+     </div>
+    </div>
+
+    <!-- TOOLBAR DE REORDENAÇÃO (acima da grade) -->
+    <div class="reorder-toolbar">
+     <button id="btnReorderPrimary" type="button" style="font-size-adjust: 0.7" class="btn-primary">
+        🔢 Alterar ordem de exibição
+     </button>
+     <button id="btnReorderCancel" type="button" class="btn btn-secondary hidden">
+        Cancelar
+     </button>
+    </div>
+
+<!-- Grade de cards -->
+<div class="grid" id="lista-mural" >
+        {% for arq in arquivos %}
+        {% set is_video = arq.filename.lower().endswith('.mp4')
+                  or arq.filename.lower().endswith('.mov')
+                  or arq.filename.lower().endswith('.avi')
+                  or arq.filename.lower().endswith('.mkv') %}
+<div class="card"
+data-id="{{ arq.id }}"
+     {% if is_video and arq.ativo == 0 %}
+     data-awaiting-sync-delete="1"
+     {% endif %}>
+            <div class="media-type-badge">
+                {% if arq.filename.lower().endswith('.mp4') %} 🎞️ VÍDEO {% else %} 🖼️ IMAGEM {% endif %}
+            </div>
+            <div class="preview-box">
+                {% if arq.filename.lower().endswith('.mp4') %}
+                    <video src="{{ url_for('static', filename='uploads/' + arq.filename) }}" style="width:100%" muted preload="metadata"></video>
+                {% else %}
+                    <img src="{{ url_for('static', filename='thumbnails/' + arq.filename.rsplit('.', 1)[0] + '.webp') }}" alt="Miniatura">
+                {% endif %}
+            </div>
+
+    <div style="margin-top: 10px; flex-grow: 1; text-align: center;">
+        <!-- Exibição da legenda (inline-edit) -->
+            <strong class="legend-inline"
+                    data-filename="{{ arq.filename }}"
+                    title="Clique para editar (máx. 50)">
+             {{ arq.legenda }}
+            </strong>
+
+        {% if not arq.filename.lower().endswith('.mp4') %}
+            <form action="{{ url_for('atualizar_tempo', nome_arquivo=arq.filename) }}" method="post" class="duration-form">
+                <div style="position: relative;">
+                    <input type="number" name="tempo" value="{{ arq.tempo }}" min="1">
+                    <span style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 10px; font-weight: 700; color: #cbd5e0; text-transform: uppercase;">seg</span>
+                </div>
+                <button type="button"
+                        class="btn-save-simple salvar-tempo-btn"
+                        data-file="{{ arq.filename }}">
+                 SALVAR ALTERAÇÃO
+                </button>
+            </form>
+        {% else %}
+      <div class="btn-info-large">Duração Automática</div>
+        {% endif %}
+    </div>
+
+            <!-- Toggle EXIBIR/OCULTAR (AJAX) -->
+            <button type="button"
+                    class="btn toggle-btn {{ 'btn-toggle-on' if arq.ativo == 1 else 'btn-toggle-off' }}"
+                    data-file="{{ arq.filename }}"
+                    data-active="{{ arq.ativo }}">
+             {{ '✔ EXIBINDO' if arq.ativo == 1 else '✖ OCULTO' }}
+            </button>
+
+            {# --- BOTÃO EXCLUIR --- #}
+            {% set is_video = arq.filename.lower().endswith('.mp4') or
+                             arq.filename.lower().endswith('.mov') or
+                             arq.filename.lower().endswith('.avi') or
+                             arq.filename.lower().endswith('.mkv') %}
+            {% if is_video %}
+            {% if arq.ativo == 0 %}
+             <!-- Vídeo oculto: usa o MESMO modal das imagens -->
+             <button type="button" class="btn btn-delete"
+                     onclick="openDeleteModal('{{ arq.filename }}', '{{ arq.id }}')  ">
+               EXCLUIR
+             </button>
+            {% else %}
+              <button type="button" class="btn btn-delete btn-disabled"
+                      title="Para excluir: 1) Ocultar, 2) ATUALIZAR NA TV, 3) Voltar e excluir"
+                      disabled>
+                EXCLUIR
+              </button>
+            {% endif %}
+          {% else %}
+            <!-- Imagens: fluxo normal com modal (mantido) -->
+            <button type="button" class="btn btn-delete"
+                    onclick="openDeleteModal('{{ arq.filename }}', '{{ arq.id }}')">
+              EXCLUIR
+            </button>
+          {% endif %}
+    </div>
+        {% endfor %}
+</div>
+</div>
+
+<!-- ========= SCRIPTS ========= -->
+
+<script>
+ // --- FUNÇÃO 1: Atualiza estilo ao escolher arquivo ---
+ function atualizarBotao(input) {
+        const label = document.getElementById('label-arquivo');
+        const textSpan = document.getElementById('btn-text');
+        const containerTempo = document.getElementById('containerTempo');
+        const campoTempo = document.getElementById('tempo');
+        if (input.files && input.files.length > 0) {
+            const arquivo = input.files[0];
+            const nome = arquivo.name.toLowerCase();
+            const tamanhoMB = arquivo.size / (1024 * 1024);
+            const limiteMB = 2048; // 2GB
+            if (tamanhoMB > limiteMB) {
+                alert("❌ Arquivo muito grande! O limite é de 2GB.");
+                input.value = "";
+                return;
+            }
+            if (label) label.classList.add('file-selected');
+            if (textSpan) textSpan.innerText = arquivo.name;
+
+            const isVideo = nome.endsWith('.mp4') || nome.endsWith('.mov') || nome.endsWith('.avi') || nome.endsWith('.mkv');
+            if (isVideo) {
+                if (containerTempo) containerTempo.style.display = 'none';
+                if (campoTempo) {
+                    campoTempo.disabled = true;
+                    campoTempo.value = "0";
+                }
+            } else {
+                if (containerTempo) containerTempo.style.display = 'block';
+                if (campoTempo) {
+                    campoTempo.disabled = false;
+                    campoTempo.required = true;
+                    if (campoTempo.value === "0") campoTempo.value = "10";
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+function solicitarSincronizacao() {
+  const btn = document.getElementById('btnSync');
+  const som = document.getElementById('som-sucesso');
+  if (window.__syncInFlight) return;
+  window.__syncInFlight = true;
+  btn.disabled = true;
+  btn.style.pointerEvents = 'none';
+  btn.innerHTML = "⌛ ENVIANDO...";
+
+  fetch('/forcar_update', { method: 'POST' })
+    .then(res => res.json())
+    .then(dados => {
+      if (dados.status === "ok") {
+        if (som) som.play();
+        btn.innerHTML = "✅ SINCRONIZADO!";
+        btn.style.background = "#27ae60";
+
+        // 🔓 Libera EXCLUIR para todos os cards pendentes e ocultos
+        const cards = document.querySelectorAll('.card[data-awaiting-sync-delete="1"]');
+        cards.forEach(card => {
+          const toggleBtn = card.querySelector('.toggle-btn');
+          const delBtn    = card.querySelector('.btn-delete');
+          const isActive  = Number(toggleBtn?.dataset.active || 0) === 1; // 1 = EXIBINDO
+          if (delBtn && !isActive) {
+            delBtn.classList.remove('btn-disabled');
+            delBtn.removeAttribute('disabled');
+            delBtn.title = 'EXCLUIR';
+            card.removeAttribute('data-awaiting-sync-delete');
+          }
+        });
+
+        setTimeout(() => {
+          window.location.reload(true);
+        }, 600);
+      } else {
+        throw new Error("Falha ao atualizar");
+      }
+    })
+    .catch(() => {
+      btn.innerHTML = "🔄 ATUALIZAR NA TV";
+      btn.style.background = "";
+      alert("Falha ao atualizar a TV. Tente novamente.");
+    })
+    .finally(() => {
+      window.__syncInFlight = false;
+      btn.disabled = false;
+      btn.style.pointerEvents = '';
+    });
+}
+</script>
+
+<!-- Reordenar por número (mantido) -->
+<script>
+(function () {
+ const grid = document.getElementById('lista-mural');
+ if (!grid) return;
+
+ const btnPrimary = document.getElementById('btnReorderPrimary');
+ const btnCancel = document.getElementById('btnReorderCancel');
+
+ let inReorder = false;
+ let snapshot = [];
+ const getCards = () => [...grid.querySelectorAll('.card')];
+
+ function setToolbar(){
+   if (inReorder) {
+     btnPrimary.textContent = '💾 Salvar ordem';
+     btnPrimary.disabled = false;
+     btnCancel.classList.remove('hidden');
+   } else {
+     btnPrimary.textContent = '🔢 Alterar ordem de exibição';
+     btnPrimary.disabled = false;
+     btnCancel.classList.add('hidden');
+   }
+ }
+
+ function enterReorder(){
+   if (inReorder) return;
+   inReorder = true;
+   document.body.classList.add('reorder-active');
+
+   const cards = getCards();
+   const total = cards.length;
+   snapshot = [];
+
+   cards.forEach((card, idx) => {
+     card.style.position = 'relative';
+     let box = card.querySelector('.reorder-number');
+     if (!box) {
+       box = document.createElement('div');
+       box.className = 'reorder-number';
+       box.innerHTML = `
+         <span class="pos-label">Posição:</span>
+         <select class="pos-input" aria-label="Posição do card"></select>
+       `;
+       card.appendChild(box);
+     }
+     const sel = box.querySelector('.pos-input');
+     sel.innerHTML = '';
+     for (let i=1;i<=total;i++){
+       const opt = document.createElement('option');
+       opt.value = i; opt.textContent = i;
+       if (i === (idx+1)) opt.selected = true;
+       sel.appendChild(opt);
+     }
+     sel.dataset.prev = String(idx+1);
+     sel.onchange = () => handleSwap(card, sel);
+
+     snapshot.push({ id: Number(card.dataset.id), pos: idx+1 });
+   });
+
+   setToolbar();
+ }
+
+ function exitReorder(cancel=false){
+   if (!inReorder) return;
+   inReorder = false;
+   document.body.classList.remove('reorder-active');
+
+   if (cancel && snapshot.length) {
+     const map = new Map(snapshot.map(x => [x.id, x.pos]));
+     getCards().forEach((card) => {
+       const sel = card.querySelector('.pos-input');
+       if (sel) {
+         const original = map.get(Number(card.dataset.id));
+         if (original) { sel.value = String(original); sel.dataset.prev = String(original); }
+       }
+     });
+   }
+
+   grid.querySelectorAll('.reorder-number').forEach(el => el.remove());
+   getCards().forEach(c => c.style.removeProperty('position'));
+   setToolbar();
+ }
+
+ function handleSwap(card, sel) {
+   const oldPos = Number(sel.dataset.prev);
+   const newPos = Number(sel.value);
+   if (!newPos || newPos === oldPos) { sel.value = String(oldPos); return; }
+
+   const other = getCards().find(c =>
+     c !== card && c.querySelector('.pos-input')?.value === String(newPos)
+   );
+   if (other) {
+     const otherSel = other.querySelector('.pos-input');
+     otherSel.value = String(oldPos);
+     otherSel.dataset.prev = String(oldPos);
+     flashSwap(card); flashSwap(other);
+   }
+   sel.dataset.prev = String(newPos);
+   btnPrimary.disabled = false;
+ }
+
+ function flashSwap(card){
+   card.classList.remove('swap-flash');
+   void card.offsetWidth;
+   card.classList.add('swap-flash');
+ }
+
+ function buildFinalOrder(){
+   const pairs = getCards().map(c => {
+     const id = Number(c.dataset.id);
+     const sel = c.querySelector('.pos-input');
+     const pos = sel ? Number(sel.value) : 0;
+     return { id, pos, card: c };
+   });
+   const now = getCards();
+   pairs.sort((a,b) => (a.pos - b.pos) || (now.indexOf(a.card) - now.indexOf(b.card)));
+   return pairs;
+ }
+
+ async function saveOrder(){
+   if (btnPrimary.disabled) return;
+
+   const pairs = buildFinalOrder();
+   const total = pairs.length;
+   const nums  = pairs.map(p => p.pos).sort((a,b)=>a-b);
+   for (let i=1;i<=total;i++){
+     if (nums[i-1] !== i) { toast('⚠️ Corrija as posições para 1..'+total, true); return; }
+   }
+   const ordem = pairs.map(p => p.id);
+
+   const oldText = btnPrimary.textContent;
+   btnPrimary.textContent = '⏳ Salvando...';
+   btnPrimary.disabled = true;
+   try{
+     const r = await fetch('/reordenar', {
+       method:'POST',
+       headers:{'Content-Type':'application/json'},
+       body: JSON.stringify({ ordem })
+     });
+     if (!r.ok) throw new Error('HTTP '+r.status);
+
+     pairs.forEach(p => grid.appendChild(p.card));
+     toast('✅ Ordem salva. Agora clique em “ATUALIZAR NA TV”.');
+     exitReorder(false);
+   } catch(err){
+     console.error(err);
+     toast('❌ Erro ao salvar ordem', true);
+     btnPrimary.disabled = false;
+     btnPrimary.textContent = oldText;
+     setToolbar();
+     return;
+   } finally {
+     btnPrimary.disabled = false;
+     btnPrimary.textContent = oldText;
+     setToolbar();
+   }
+ }
+
+ btnPrimary.addEventListener('click', () => {
+   if (!inReorder) enterReorder();
+   else saveOrder();
+ });
+ btnCancel.addEventListener('click', () => exitReorder(true));
+
+ function toast(msg, isErr=false){
+   const t = document.createElement('div');
+   t.textContent = msg;
+   Object.assign(t.style, {
+     position:'fixed', bottom:'16px', left:'50%', transform:'translateX(-50%)',
+     background: isErr ? '#e74c3c' : '#2ecc71',
+     color:'#fff', padding:'10px 16px', borderRadius:'8px',
+     fontWeight:'700', zIndex:99999, boxShadow:'0 6px 16px rgba(0,0,0,.2)'
+   });
+   document.body.appendChild(t);
+   setTimeout(()=> t.remove(), 2600);
+ }
+})();
+</script>
+
+<!-- Edição inline de legenda (mantido) -->
+<script>
+(function(){
+ function toast(msg, isErr=false){
+   const t=document.createElement('div');
+   t.textContent=msg;
+   Object.assign(t.style,{
+     position:'fixed',bottom:'16px',left:'50%',transform:'translateX(-50%)',
+     background:isErr?'#e74c3c':'#2ecc71',
+     color:'#fff',padding:'10px 16px',borderRadius:'8px',
+     fontWeight:'700',zIndex:99999,boxShadow:'0 6px 16px rgba(0,0,0,.2)'
+   });
+   document.body.appendChild(t);
+   setTimeout(()=>t.remove(),2300);
+ }
+
+ function enableInlineEdit(el){
+   if (document.body.classList.contains('reorder-active')) return;
+   const filename = el.dataset.filename;
+   const original = el.textContent.trim();
+
+   const input = document.createElement('input');
+   input.type='text';
+   input.value=original;
+   input.maxLength=50;
+   input.className='legend-edit-input';
+
+   el.style.display='none';
+   el.insertAdjacentElement('afterend',input);
+   input.focus();
+   input.select();
+
+   let closing = false;
+
+   async function save(){
+     if (closing) return;
+     closing = true;
+     const nova = input.value.trim();
+     if (nova === original){ cleanup(); return; }
+
+     const fd = new FormData();
+     fd.append('legenda', nova);
+
+     try{
+       const r = await fetch(`/atualizar_legenda/${encodeURIComponent(filename)}`,{
+         method:'POST', body:fd
+       });
+       const data = await r.json();
+       if (!data.ok) throw new Error(data.msg||'Erro');
+       el.textContent = data.legenda;
+       toast("✅ Legenda atualizada!");
+       cleanup();
+     }catch(err){
+       console.error(err);
+       toast("❌ "+err.message,true);
+       input.disabled=false;
+       input.focus();
+       input.select();
+       closing=false;
+     }
+   }
+
+   function cleanup(){
+     input.remove();
+     el.style.display='';
+   }
+
+   input.addEventListener('keydown',e=>{
+     if (e.key==='Enter'){ e.preventDefault(); save(); }
+     if (e.key==='Escape'){ e.preventDefault(); cleanup(); }
+   });
+   input.addEventListener('blur',()=>save());
+ }
+
+ document.querySelectorAll('.legend-inline').forEach(el=>{
+   el.addEventListener('click',()=> enableInlineEdit(el));
+ });
+})();
+</script>
+
+<!-- Upload com barra de progresso (mantido) -->
+<script>
+(function () {
+ const form = document.querySelector('.upload-section form');
+ if (!form) return;
+
+ const overlay = document.getElementById('uploadOverlay');
+ const bar = document.getElementById('progressBar');
+ const pct = document.getElementById('progressPct');
+ const meta = document.getElementById('progressMeta');
+ const btnSend = document.getElementById('btnEnviar');
+
+ const toMB = (bytes) => (bytes / (1024*1024)).toFixed(1);
+
+ function openOverlay() {
+   overlay.style.display = 'flex';
+   overlay.setAttribute('aria-hidden', 'false');
+   updateProgress(0, 0);
+ }
+ function closeOverlay() {
+   overlay.style.display = 'none';
+   overlay.setAttribute('aria-hidden', 'true');
+ }
+ function updateProgress(loaded, total) {
+   if (!total || total <= 0) {
+     bar.style.width = '0%';
+     pct.textContent = '0%';
+     meta.textContent = '0 MB de 0 MB';
+     return;
+   }
+   const p = Math.min(100, Math.round((loaded / total) * 100));
+   bar.style.width = p + '%';
+   pct.textContent = p + '%';
+   meta.textContent = `${toMB(loaded)} MB de ${toMB(total)} MB`;
+ }
+
+ form.addEventListener('submit', function (e) {
+   e.preventDefault();
+   const fileInput = form.querySelector('input[type="file"]');
+   if (!fileInput || !fileInput.files || fileInput.files.length === 0) {
+     alert('Selecione um arquivo primeiro.');
+     return;
+   }
+   if (btnSend) {
+     btnSend.disabled = true;
+     btnSend.textContent = 'Enviando...';
+     btnSend.style.opacity = '.7';
+   }
+   openOverlay();
+
+   const xhr = new XMLHttpRequest();
+   xhr.upload.onprogress = function (ev) {
+     if (ev.lengthComputable) updateProgress(ev.loaded, ev.total);
+   };
+   xhr.onload = function () {
+     if (xhr.status >= 200 && xhr.status < 400) {
+       window.location.href = '/admin';
+     } else {
+       handleError(`Falha no envio (HTTP ${xhr.status}).`);
+     }
+   };
+   xhr.onerror = function () {
+     handleError('Erro de rede durante o envio.');
+   };
+   function handleError(msg) {
+     console.error(msg);
+     alert(msg);
+     if (btnSend) {
+       btnSend.disabled = false;
+       btnSend.textContent = 'ENVIAR';
+       btnSend.style.opacity = '1';
+     }
+     closeOverlay();
+   }
+   const fd = new FormData(form);
+   xhr.open('POST', '/admin', true);
+   xhr.send(fd);
+ });
+})();
+</script>
+
+<!-- Salvar tempo (imagem) via AJAX (mantido) -->
+<script>
+(function(){
+ async function salvarTempo(filename, tempo) {
+   const fd = new FormData();
+   fd.append('tempo', tempo);
+   const r = await fetch(`/atualizar_tempo/${encodeURIComponent(filename)}`, {
+     method: "POST",
+     body: fd
+   });
+   if (!r.ok) throw new Error("Falha ao salvar tempo.");
+ }
+
+ document.querySelectorAll(".salvar-tempo-btn").forEach(btn => {
+   btn.addEventListener("click", async () => {
+     try {
+       const filename = btn.dataset.file;
+       const input = btn.closest(".duration-form").querySelector("input[name='tempo']");
+       const tempo = input.value;
+
+       btn.textContent = "⏳ Salvando...";
+       btn.disabled = true;
+
+       await salvarTempo(filename, tempo);
+
+       btn.textContent = "✔ Salvo!";
+       setTimeout(() => {
+         btn.textContent = "SALVAR ALTERAÇÃO";
+         btn.disabled = false;
+       }, 1200);
+
+     } catch (err) {
+       alert("Erro ao salvar tempo.");
+       btn.disabled = false;
+       btn.textContent = "SALVAR ALTERAÇÃO";
+     }
+   });
+ });
+})();
+</script>
+
+<!-- Toggle EXIBIR/OCULTAR com flag de “aguardando sync” e controle do Excluir -->
+<script>
+(function(){
+ function toast(msg, isErr=false){
+   const t=document.createElement('div');
+   t.textContent=msg;
+   Object.assign(t.style,{
+     position:'fixed',bottom:'16px',left:'50%',transform:'translateX(-50%)',
+     background:isErr?'#e74c3c':'#2ecc71',
+     color:'#fff',padding:'10px 16px',borderRadius:'8px',
+     fontWeight:'700',zIndex:99999,boxShadow:'0 6px 16px rgba(0,0,0,.2)'
+   });
+   document.body.appendChild(t);
+   setTimeout(()=>t.remove(),2300);
+ }
+
+ async function toggleMedia(filename) {
+   const r = await fetch(`/toggle/${encodeURIComponent(filename)}`, { method:"POST" });
+   if (!r.ok) throw new Error("Falha ao alternar exibição.");
+   return r.json(); // { ok: true, novo_estado: 0|1 }
+ }
+
+ document.querySelectorAll(".toggle-btn").forEach(btn=>{
+   btn.addEventListener("click", async () => {
+     try {
+       btn.disabled = true;
+       const filename = btn.dataset.file;
+       const data = await toggleMedia(filename);
+       const novo = Number(data.novo_estado);
+
+       // Atualiza o próprio toggle
+       btn.dataset.active = novo;
+       if (novo === 1) {
+         btn.classList.remove("btn-toggle-off");
+         btn.classList.add("btn-toggle-on");
+         btn.textContent = "✔ EXIBINDO";
+       } else {
+         btn.classList.remove("btn-toggle-on");
+         btn.classList.add("btn-toggle-off");
+         btn.textContent = "✖ OCULTO";
+       }
+
+       // Card e botão excluir
+       const card   = btn.closest(".card");
+       const delBtn = card?.querySelector(".btn-delete");
+
+       // É vídeo?
+       const isVideo = String(filename).toLowerCase().match(/\.(mp4|mov|avi|mkv)$/);
+
+       if (isVideo && delBtn) {
+         if (novo === 1) {
+           // EXIBINDO -> bloquear excluir e remover pendência
+           delBtn.classList.add("btn-disabled");
+           delBtn.setAttribute("disabled","disabled");
+           delBtn.title = "Para excluir: 1) Ocultar, 2) ATUALIZAR NA TV, 3) Voltar e excluir";
+           card.removeAttribute('data-awaiting-sync-delete');
+         } else {
+           // OCULTO -> marcar pendência e manter excluir bloqueado até atualizar TV
+           card.setAttribute('data-awaiting-sync-delete','1');
+           delBtn.classList.add("btn-disabled");
+           delBtn.setAttribute("disabled","disabled");
+           delBtn.title = "Aguardando ATUALIZAR NA TV para liberar exclusão";
+           toast('Vídeo oculto. Agora clique em “ATUALIZAR NA TV” para liberar a exclusão.');
+         }
+       }
+     } catch(err){
+       alert("Erro ao mudar exibição.");
+     } finally {
+       btn.disabled = false;
+     }
+   });
+ });
+})();
+</script>
+
+<!-- Excluir via modal (imagens) -->
+<script>
+function openDeleteModal(filename, cardId) {
+  const confirmBtn = document.getElementById('confirmDeleteBtn');
+
+  // Guard-rail: se for vídeo (não é o caso do modal) ou card aguardando sync, bloqueia:
+
+  confirmBtn.removeAttribute('href');
+  confirmBtn.dataset.file = filename;
+  confirmBtn.dataset.cardId = cardId;
+  document.getElementById('deleteModal').style.display = 'flex';
+}
+function closeDeleteModal() {
+  document.getElementById('deleteModal').style.display = 'none';
+}
+
+// "Sim, Excluir" (POST + remove card)
+document.getElementById('confirmDeleteBtn')?.addEventListener('click', async (e) => {
+  e.preventDefault();
+  const confirmBtn = e.currentTarget;
+  const filename = confirmBtn.dataset.file;
+  const cardId   = confirmBtn.dataset.cardId;
+  if (!filename) return;
+
+  try {
+    confirmBtn.textContent = 'Excluindo...';
+    confirmBtn.style.pointerEvents = 'none';
+    const r = await fetch(`/deletar/${encodeURIComponent(filename)}`, { method:'POST' });
+    if (!r.ok) {
+      const txt = await r.text().catch(()=> '');
+      throw new Error(txt || 'Falha ao excluir');
+    }
+    const card = document.querySelector(`.card[data-id="${cardId}"]`);
+    if (card) card.remove();
+  } catch(err){
+    alert('Erro ao excluir: ' + (err.message || err));
+  } finally {
+    confirmBtn.textContent = 'Sim, Excluir';
+    confirmBtn.style.pointerEvents = '';
+    closeDeleteModal();
+  }
+});
+</script>
+
+<script>
+// --- GUIA: abrir/fechar modal ---
+(function() {
+  const guiaModal = document.getElementById('guiaModal');
+  if (!guiaModal) return;
+
+  function travarScroll() { document.body.style.overflow = 'hidden'; }
+  function liberarScroll() { document.body.style.overflow = ''; }
+
+  function abrirGuia() {
+    guiaModal.classList.add('aberto');
+    guiaModal.setAttribute('aria-hidden', 'false');
+    travarScroll();
+
+    // foco no título para acessibilidade
+    const titulo = guiaModal.querySelector('.modal-header-guia h2');
+    if (titulo) {
+      titulo.setAttribute('tabindex', '-1');
+      titulo.focus();
+    }
+  }
+
+  function fecharGuia() {
+    guiaModal.classList.remove('aberto');
+    guiaModal.setAttribute('aria-hidden', 'true');
+    liberarScroll();
+
+    // devolve foco ao botão flutuante
+    const btn = document.querySelector('.btn-ajuda-flutuante');
+    if (btn) btn.focus();
+  }
+
+  // expõe globalmente porque o HTML usa onclick="fecharGuia()"
+  window.abrirGuia = abrirGuia;
+  window.fecharGuia = fecharGuia;
+
+  // fechar clicando no backdrop
+  guiaModal.addEventListener('click', (e) => {
+    if (e.target === guiaModal) fecharGuia();
+  });
+
+  // fechar com ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && guiaModal.classList.contains('aberto')) {
+      fecharGuia();
+    }
+  });
+
+  // atributos ARIA do diálogo
+  guiaModal.setAttribute('role', 'dialog');
+  guiaModal.setAttribute('aria-modal', 'true');
+  guiaModal.setAttribute('aria-hidden', 'true');
+})();
+</script>
+
+        {% include 'footer.html' %}
+</body>
+</html>

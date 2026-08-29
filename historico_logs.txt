@@ -1,0 +1,633 @@
+[17/02/2026 04:23:18] Usuário: admin | 🩻 Usuário apagado com sucesso | Usuário: Isadora Costa | ID: 18
+[17/02/2026 04:23:31] Usuário: admin | 🗑️ EXCLUSÃO: 709974.jpg | O arquivo 709974.jpg foi removido do mural.
+[17/02/2026 05:54:49] Usuário: admin | 🚪 Saiu do sistema
+[17/02/2026 05:54:56] Usuário: admin | ✅ Login realizado
+[17/02/2026 05:56:53] Usuário: admin | 🚀 Mídia enviada | sdsd | Arquivo: video1.mp4
+[17/02/2026 06:07:32] Usuário: admin | ✅ Login realizado
+[17/02/2026 06:07:39] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[17/02/2026 06:07:48] Usuário: admin | 🚀 Mídia enviada | Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[17/02/2026 09:12:06] Usuário: admin | 🔄 Sincronização disparada manualmente para a TV
+[17/02/2026 09:12:41] Usuário: admin | 🚀 Mídia enviada | menino subindo | Arquivo: 709974.jpg
+[17/02/2026 09:15:54] Usuário: admin | 🔄 Sincronização disparada manualmente para a TV
+[17/02/2026 09:16:18] Usuário: admin | 🚀 Mídia enviada | Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[17/02/2026 09:22:25] Usuário: admin | 🚀 Mídia enviada | Mac OS | Arquivo: LionwithCypresses_Mac.jpg
+[17/02/2026 09:22:38] Usuário: admin | 🔄 Sincronização disparada manualmente para a TV
+[17/02/2026 09:22:56] Usuário: admin | ⏱️ Tempo alterado: Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | Novo tempo: 3s
+[17/02/2026 09:22:58] Usuário: admin | ⏱️ Tempo alterado: Mac OS | Arquivo: LionwithCypresses_Mac.jpg | Novo tempo: 3s
+[17/02/2026 09:23:11] Usuário: admin | 🚀 Mídia enviada | Mac OS | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 09:23:42] Usuário: admin | 🔄 Sincronização disparada manualmente para a TV
+[17/02/2026 09:27:19] Usuário: admin | 🔄 Comando de atualização enviado para as telas | Tipo: manual
+[17/02/2026 09:27:43] Usuário: admin | 🚀 Mídia enviada | Mac os 2 | Arquivo: Rancho_Cucamonga_Tree_16.png
+[17/02/2026 09:27:48] Usuário: admin | ⏱️ Tempo alterado: Mac os 2 | Arquivo: Rancho_Cucamonga_Tree_16.png | Novo tempo: 3s
+[17/02/2026 09:28:00] Usuário: admin | 🔄 Comando de atualização enviado para as telas | Tipo: nova_midia
+[17/02/2026 09:30:56] Usuário: admin | 🚀 Mídia enviada | Mac Sem | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 09:31:09] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Adicionou uma nova mídia
+[17/02/2026 09:31:36] Usuário: admin | 🚀 Mídia enviada | iki | Arquivo: 709974.jpg
+[17/02/2026 09:31:37] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Adicionou uma nova mídia
+[17/02/2026 09:31:45] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Atualizou o Mural
+[17/02/2026 09:31:49] Usuário: admin | 🗑️ EXCLUSÃO: 709974.jpg | O arquivo 709974.jpg foi removido do mural.
+[17/02/2026 09:31:53] Usuário: admin | 🗑️ EXCLUSÃO: Rancho_Cucamonga_NoTree_16.png | O arquivo Rancho_Cucamonga_NoTree_16.png foi removido do mural.
+[17/02/2026 09:32:01] Usuário: admin | 🚀 Mídia enviada | 11 | Arquivo: aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg
+[17/02/2026 09:32:10] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Adicionou uma nova mídia
+[17/02/2026 09:32:51] Usuário: admin | 🚀 Mídia enviada | sdsd | Arquivo: 709974.jpg
+[17/02/2026 09:32:57] Usuário: admin | 🔄 Comando de atualização enviado para as telas | Tipo: nova_midia
+[17/02/2026 09:33:37] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Movimentou o Mural
+[17/02/2026 09:33:48] Usuário: admin | 🚀 Mídia enviada | mario | Arquivo: video1.mp4
+[17/02/2026 09:33:50] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Adicionou uma nova mídia
+[17/02/2026 09:34:39] Usuário: admin | 🚀 Mídia enviada | xc | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[17/02/2026 09:34:50] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Adicionou uma nova mídia
+[17/02/2026 09:35:27] Usuário: admin | 🔄 Comando de atualização enviado para as telas | Tipo: manual
+[17/02/2026 09:35:27] Usuário: admin | 🔄 Comando de atualização enviado para as telas | Tipo: manual
+[17/02/2026 09:35:36] Usuário: admin | 🚀 Mídia enviada | sds | Arquivo: 453417807_899303708891626_1561466812433921589_n.jpg
+[17/02/2026 09:35:40] Usuário: admin | 🔄 Comando de atualização enviado para as telas | Tipo: nova_midia
+[17/02/2026 09:38:06] Usuário: admin | 🚀 Mídia enviada | dfd | Arquivo: 955059.jpg
+[17/02/2026 09:38:10] Usuário: admin | 🔄 Comando de atualização enviado para as telas | Tipo: nova_midia
+[17/02/2026 09:38:40] Usuário: admin | 🔄 Comando de atualização enviado para as telas | Tipo: Movimentou o mural
+[17/02/2026 09:39:17] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Movimentou o mural
+[17/02/2026 09:39:33] Usuário: admin | 🚀 Mídia enviada | dfd | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 09:39:39] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Adicionou uma nova mídia
+[17/02/2026 09:39:46] Usuário: admin | 🗑️ EXCLUSÃO: BigSurTakeII_Mac.jpg | O arquivo BigSurTakeII_Mac.jpg foi removido do mural.
+[17/02/2026 09:39:48] Usuário: admin | 🗑️ EXCLUSÃO: 955059.jpg | O arquivo 955059.jpg foi removido do mural.
+[17/02/2026 09:39:50] Usuário: admin | 🗑️ EXCLUSÃO: 453417807_899303708891626_1561466812433921589_n.jpg | O arquivo 453417807_899303708891626_1561466812433921589_n.jpg foi removido do mural.
+[17/02/2026 09:39:52] Usuário: admin | 🗑️ EXCLUSÃO: monado-xenoblade-chronicles-moewalls-com.mp4 | O arquivo monado-xenoblade-chronicles-moewalls-com.mp4 foi removido do mural.
+[17/02/2026 09:39:56] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[17/02/2026 09:39:58] Usuário: admin | 🗑️ EXCLUSÃO: 709974.jpg | O arquivo 709974.jpg foi removido do mural.
+[17/02/2026 09:40:00] Usuário: admin | 🗑️ EXCLUSÃO: aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg | O arquivo aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg foi removido do mural.
+[17/02/2026 09:40:01] Usuário: admin | 🗑️ EXCLUSÃO: Rancho_Cucamonga_Tree_16.png | O arquivo Rancho_Cucamonga_Tree_16.png foi removido do mural.
+[17/02/2026 09:40:03] Usuário: admin | 🗑️ EXCLUSÃO: LionwithCypresses_Mac.jpg | O arquivo LionwithCypresses_Mac.jpg foi removido do mural.
+[17/02/2026 09:40:05] Usuário: admin | 🗑️ EXCLUSÃO: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | O arquivo macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg foi removido do mural.
+[17/02/2026 09:42:31] Usuário: admin | 🚀 Mídia enviada | dfd | Arquivo: aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg
+[17/02/2026 09:42:38] Usuário: admin | 🗑️ EXCLUSÃO: aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg | O arquivo aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg foi removido do mural.
+[17/02/2026 09:42:45] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Adicionou uma nova mídia
+[17/02/2026 09:43:03] Usuário: admin | 🚀 Mídia enviada | Mac OS BigSur | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[17/02/2026 09:43:05] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Adicionou uma nova mídia
+[17/02/2026 09:43:22] Usuário: admin | 🚀 Mídia enviada | zelda | Arquivo: 1330226.jpeg
+[17/02/2026 09:43:23] Usuário: admin | 🔄 Atualizou o Mural Digital | Tipo: Adicionou uma nova mídia
+[17/02/2026 09:47:05] Usuário: admin | 🚀 Mídia enviada | Mac OS | Arquivo: LionwithCypresses_Mac.jpg
+[17/02/2026 09:47:06] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 09:47:20] Usuário: admin | 🚀 Mídia enviada | Mac OS | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 09:47:30] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 09:47:46] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 09:48:08] Usuário: admin | ⏱️ Tempo alterado: Mac OS | Arquivo: BigSurTakeII_Mac.jpg | Novo tempo: 3s
+[17/02/2026 09:48:10] Usuário: admin | 👁️ Ocultou: Mac OS | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 09:48:13] Usuário: admin | 👁️ Ocultou: Mac OS | Arquivo: LionwithCypresses_Mac.jpg
+[17/02/2026 09:48:15] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 09:48:29] Usuário: admin | 👁️ Exibiu: Mac OS | Arquivo: LionwithCypresses_Mac.jpg
+[17/02/2026 09:48:31] Usuário: admin | 👁️ Exibiu: Mac OS | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 09:48:32] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 09:49:16] Usuário: admin | 👥 Novo usuário criado | O usuário 'Isadora Costa' foi adicionado ao sistema com ID 2.
+[17/02/2026 09:49:19] Usuário: admin | 🔑 Senha resetada | Usuário: Isadora Costa | ID: 2 - Senha padrão '123456' aplicada.
+[17/02/2026 09:49:21] Usuário: admin | 🩻 Usuário apagado com sucesso | Usuário: Isadora Costa | ID: 2
+[17/02/2026 09:49:38] Usuário: admin | 👥 Novo usuário criado | O usuário 'Isadora Costa' foi adicionado ao sistema com ID 3.
+[17/02/2026 09:49:41] Usuário: admin | 🚪 Saiu do sistema
+[17/02/2026 09:49:45] Usuário: Isadora Costa | ✅ Login realizado
+[17/02/2026 09:49:50] Usuário: Isadora Costa | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 09:50:06] Usuário: Isadora Costa | 🚀 Mídia enviada | Zeruda | Arquivo: 709974.jpg
+[17/02/2026 09:50:20] Usuário: Isadora Costa | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 09:50:35] Usuário: Isadora Costa | 👁️ Ocultou: Zeruda | Arquivo: 709974.jpg
+[17/02/2026 09:50:36] Usuário: Isadora Costa | 👁️ Ocultou: Mac OS | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 09:50:37] Usuário: Isadora Costa | 👁️ Ocultou: Mac OS | Arquivo: LionwithCypresses_Mac.jpg
+[17/02/2026 09:50:46] Usuário: Isadora Costa | ⏱️ Tempo alterado: Mac OS BigSur | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | Novo tempo: 2s
+[17/02/2026 09:50:49] Usuário: Isadora Costa | ⏱️ Tempo alterado: zelda | Arquivo: 1330226.jpeg | Novo tempo: 10s
+[17/02/2026 09:50:51] Usuário: Isadora Costa | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 09:51:16] Usuário: Isadora Costa | 🚀 Mídia enviada | Teste de Video | Arquivo: video1.mp4
+[17/02/2026 09:51:19] Usuário: Isadora Costa | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 09:52:53] Usuário: Isadora Costa | 👁️ Ocultou: Teste de Video | Arquivo: video1.mp4
+[17/02/2026 09:53:08] Usuário: Isadora Costa | 🚀 Mídia enviada | Teste de Vídeo Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 09:53:19] Usuário: Isadora Costa | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 09:54:19] Usuário: Isadora Costa | 👁️ Ocultou: Teste de Vídeo Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 09:54:20] Usuário: Isadora Costa | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 09:54:39] Usuário: Isadora Costa | ❌ ERRO ao deletar: Dr.Stone_ScienceFuture_-_S04E10.mp4 | [WinError 32] O arquivo já está sendo usado por outro processo: 'static/uploads\\Dr.Stone_ScienceFuture_-_S04E10.mp4'
+[17/02/2026 09:54:41] Usuário: Isadora Costa | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[17/02/2026 09:54:43] Usuário: Isadora Costa | 🗑️ EXCLUSÃO: 709974.jpg | O arquivo 709974.jpg foi removido do mural.
+[17/02/2026 09:54:45] Usuário: Isadora Costa | 🗑️ EXCLUSÃO: BigSurTakeII_Mac.jpg | O arquivo BigSurTakeII_Mac.jpg foi removido do mural.
+[17/02/2026 09:54:48] Usuário: Isadora Costa | 🗑️ EXCLUSÃO: LionwithCypresses_Mac.jpg | O arquivo LionwithCypresses_Mac.jpg foi removido do mural.
+[17/02/2026 09:54:49] Usuário: Isadora Costa | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 09:54:51] Usuário: Isadora Costa | 🚪 Saiu do sistema
+[17/02/2026 09:54:57] Usuário: admin | ✅ Login realizado
+[17/02/2026 10:02:27] Usuário: admin | 🚪 Saiu do sistema
+[17/02/2026 10:02:31] Usuário: Isadora Costa | ✅ Login realizado
+[17/02/2026 10:02:56] Usuário: Isadora Costa | 🚀 Mídia enviada | Teste video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 10:03:02] Usuário: Isadora Costa | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 10:03:40] Usuário: Isadora Costa | ❌ ERRO ao deletar: Dr.Stone_ScienceFuture_-_S04E10.mp4 | name 'caminho' is not defined
+[17/02/2026 10:03:46] Usuário: Isadora Costa | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:03:51] Usuário: Isadora Costa | 🚪 Saiu do sistema
+[17/02/2026 10:03:56] Usuário: admin | ✅ Login realizado
+[17/02/2026 10:05:41] Usuário: admin | 🚀 Mídia enviada | Teste video grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 10:05:47] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 10:06:42] Usuário: admin | 🗑️ EXCLUSÃO | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 10:06:57] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:07:25] Usuário: admin | 🚀 Mídia enviada | Teste de Vídeo Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 10:07:41] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 10:08:10] Usuário: admin | 👁️ Ocultou: Teste de Vídeo Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 10:08:14] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:08:31] Usuário: admin | ❌ ERRO ao deletar: Dr.Stone_ScienceFuture_-_S04E10.mp4 | name 'caminho' is not defined
+[17/02/2026 10:38:06] Usuário: admin | ✅ Login realizado
+[17/02/2026 10:38:14] Usuário: admin | 🚪 Saiu do sistema
+[17/02/2026 10:38:28] Usuário: Sistema | 🚪 Saiu do sistema
+[17/02/2026 10:39:12] Usuário: admin | ✅ Login realizado
+[17/02/2026 10:39:13] Usuário: admin | 🚪 Saiu do sistema
+[17/02/2026 10:41:54] Usuário: admin | ✅ Login realizado
+[17/02/2026 10:42:05] Usuário: admin | 🚀 Mídia enviada | 11 | Arquivo: video1.mp4
+[17/02/2026 10:42:11] Usuário: admin | 🚀 Mídia enviada | 11 | Arquivo: teste_2026.jpg
+[17/02/2026 10:42:25] Usuário: admin | 🚀 Mídia enviada | 22 | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 10:43:15] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[17/02/2026 10:43:20] Usuário: admin | 🗑️ EXCLUSÃO: Dr.Stone_ScienceFuture_-_S04E10.mp4 | O arquivo Dr.Stone_ScienceFuture_-_S04E10.mp4 foi removido do mural.
+[17/02/2026 10:44:15] Usuário: admin | 🚀 Mídia enviada | 33 | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 10:44:22] Usuário: admin | ⏱️ Tempo alterado: 11 | Arquivo: teste_2026.jpg | Novo tempo: 3s
+[17/02/2026 10:44:24] Usuário: admin | ⏱️ Tempo alterado: zelda | Arquivo: 1330226.jpeg | Novo tempo: 3s
+[17/02/2026 10:44:26] Usuário: admin | ⏱️ Tempo alterado: Mac OS BigSur | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | Novo tempo: 3s
+[17/02/2026 10:44:29] Usuário: admin | 👁️ Ocultou: 11 | Arquivo: teste_2026.jpg
+[17/02/2026 10:44:30] Usuário: admin | 👁️ Ocultou: zelda | Arquivo: 1330226.jpeg
+[17/02/2026 10:44:32] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 10:45:30] Usuário: admin | ❌ ERRO ao deletar: Dr.Stone_ScienceFuture_-_S04E10.mp4 | [WinError 32] O arquivo já está sendo usado por outro processo: 'static/uploads\\Dr.Stone_ScienceFuture_-_S04E10.mp4'
+[17/02/2026 10:45:32] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:46:09] Usuário: admin | 🚀 Mídia enviada | 44 | Arquivo: video1.mp4
+[17/02/2026 10:46:19] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 10:46:37] Usuário: admin | 🚀 Mídia enviada | ss | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[17/02/2026 10:46:38] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 10:48:05] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[17/02/2026 10:48:08] Usuário: admin | 🗑️ EXCLUSÃO: monado-xenoblade-chronicles-moewalls-com.mp4 | O arquivo monado-xenoblade-chronicles-moewalls-com.mp4 foi removido do mural.
+[17/02/2026 10:48:11] Usuário: admin | 🗑️ EXCLUSÃO: teste_2026.jpg | O arquivo teste_2026.jpg foi removido do mural.
+[17/02/2026 10:48:12] Usuário: admin | 👁️ Exibiu: zelda | Arquivo: 1330226.jpeg
+[17/02/2026 10:48:13] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:51:26] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:53:55] Usuário: admin | 👥 Novo usuário criado | O usuário 'Isadora Costa' foi adicionado ao sistema com ID 2.
+[17/02/2026 10:54:11] Usuário: admin | ✅ Login realizado
+[17/02/2026 10:54:19] Usuário: admin | 🚪 Saiu do sistema
+[17/02/2026 10:54:25] Usuário: Isadora Costa | ✅ Login realizado
+[17/02/2026 10:54:43] Usuário: admin | 🚀 Mídia enviada | 33 | Arquivo: teste_2026.jpg
+[17/02/2026 10:54:44] Usuário: Isadora Costa | 🚀 Mídia enviada | 22 | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 10:55:19] Usuário: admin | 🚀 Mídia enviada | 66 | Arquivo: video1.mp4
+[17/02/2026 10:55:22] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 10:55:56] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:56:23] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:56:49] Usuário: admin | 👁️ Ocultou: 33 | Arquivo: teste_2026.jpg
+[17/02/2026 10:56:50] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:56:58] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:57:24] Usuário: admin | 🚀 Mídia enviada | 1 | Arquivo: 709974.jpg
+[17/02/2026 10:57:32] Usuário: admin | 🚀 Mídia enviada | 2 | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 10:57:40] Usuário: admin | 🚀 Mídia enviada | 3 | Arquivo: 955059.jpg
+[17/02/2026 10:57:48] Usuário: admin | 🚀 Mídia enviada | 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 10:57:55] Usuário: admin | 👁️ Exibiu: 33 | Arquivo: teste_2026.jpg
+[17/02/2026 10:57:59] Usuário: admin | ⏱️ Tempo alterado: 33 | Arquivo: teste_2026.jpg | Novo tempo: 3s
+[17/02/2026 10:58:03] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 10:59:15] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:59:23] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:59:29] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:59:35] Usuário: admin | 👁️ Ocultou: 66 | Arquivo: video1.mp4
+[17/02/2026 10:59:37] Usuário: admin | 👁️ Ocultou: 22 | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 10:59:39] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:59:48] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 10:59:59] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:00:12] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:00:28] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:00:59] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:02:19] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:24:17] Usuário: admin | 🚪 Saiu do sistema
+[17/02/2026 11:24:22] Usuário: admin | ✅ Login realizado
+[17/02/2026 11:26:15] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[17/02/2026 11:26:17] Usuário: admin | 🗑️ EXCLUSÃO: Dr.Stone_ScienceFuture_-_S04E10.mp4 | O arquivo Dr.Stone_ScienceFuture_-_S04E10.mp4 foi removido do mural.
+[17/02/2026 11:26:19] Usuário: admin | 👁️ Ocultou: 33 | Arquivo: teste_2026.jpg
+[17/02/2026 11:26:23] Usuário: admin | 👁️ Ocultou: 1 | Arquivo: 709974.jpg
+[17/02/2026 11:26:43] Usuário: admin | 🚀 Mídia enviada | Teste video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 11:26:49] Usuário: admin | 🔄 Atualizou o Mural Digital | Adicionou uma nova mídia
+[17/02/2026 11:26:59] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:27:04] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:27:16] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:27:32] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:27:59] Usuário: admin | 👁️ Ocultou: Teste video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 11:28:00] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:28:18] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:28:25] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:28:42] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:28:45] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:28:49] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:28:52] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:28:57] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:30:29] Usuário: admin | ✅ Login realizado
+[17/02/2026 11:30:30] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:30:40] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:30:46] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:30:58] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:31:08] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:34:35] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:34:51] Usuário: admin | 👁️ Ocultou: 2 | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 11:34:54] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:34:58] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:35:01] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:35:05] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:35:08] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:35:11] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:35:13] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:35:16] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:35:41] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:35:52] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:36:01] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:36:04] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:37:16] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:37:20] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:40:04] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:41:36] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:41:48] Usuário: admin | 👁️ Exibiu: 2 | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 11:41:49] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:42:25] Usuário: admin | 👁️ Exibiu: 1 | Arquivo: 709974.jpg
+[17/02/2026 11:42:26] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:44:59] Usuário: admin | 👁️ Ocultou: 1 | Arquivo: 709974.jpg
+[17/02/2026 11:45:01] Usuário: admin | 👁️ Ocultou: 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 11:45:04] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:51:16] Usuário: admin | 👁️ Ocultou: 2 | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 11:51:19] Usuário: admin | 👁️ Exibiu: 33 | Arquivo: teste_2026.jpg
+[17/02/2026 11:51:21] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:54:07] Usuário: admin | 👁️ Ocultou: 33 | Arquivo: teste_2026.jpg
+[17/02/2026 11:54:08] Usuário: admin | 👁️ Exibiu: 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 11:54:09] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:57:14] Usuário: admin | 👁️ Ocultou: 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 11:57:17] Usuário: admin | 👁️ Exibiu: 2 | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 11:57:18] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:57:41] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:57:54] Usuário: admin | 👁️ Exibiu: 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 11:57:55] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 11:58:15] Usuário: admin | 👁️ Ocultou: 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 11:58:19] Usuário: admin | 👁️ Exibiu: 1 | Arquivo: 709974.jpg
+[17/02/2026 11:58:20] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 12:00:51] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 12:01:08] Usuário: admin | 👁️ Exibiu: 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 12:01:08] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 12:01:29] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 12:09:36] Usuário: admin | 🔄 Atualizou o Mural Digital | Movimentou o mural
+[17/02/2026 12:12:50] Usuário: admin | 👁️ Ocultou: 2 | Arquivo: BigSurTakeII_Mac.jpg
+[17/02/2026 12:12:52] Usuário: admin | 👁️ Ocultou: 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 12:12:55] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:13:07] Usuário: admin | 👁️ Exibiu: 33 | Arquivo: teste_2026.jpg
+[17/02/2026 12:13:09] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:13:19] Usuário: admin | 👁️ Exibiu: Teste video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 12:13:20] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:14:03] Usuário: admin | 👁️ Ocultou: Teste video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 12:14:04] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:15:45] Usuário: admin | 👁️ Ocultou: 33 | Arquivo: teste_2026.jpg
+[17/02/2026 12:15:49] Usuário: admin | 👁️ Exibiu: Teste video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 12:15:50] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:19:36] Usuário: admin | 👁️ Ocultou: Teste video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 12:19:49] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:21:24] Usuário: admin | 👁️ Ocultou: 1 | Arquivo: 709974.jpg
+[17/02/2026 12:21:25] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:21:42] Usuário: admin | 👁️ Exibiu: 33 | Arquivo: teste_2026.jpg
+[17/02/2026 12:21:45] Usuário: admin | 👁️ Exibiu: 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 12:21:46] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:22:03] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:22:12] Usuário: admin | 👁️ Ocultou: 4 | Arquivo: Rancho_Cucamonga_NoTree_16.png
+[17/02/2026 12:22:13] Usuário: admin | 👁️ Ocultou: 3 | Arquivo: 955059.jpg
+[17/02/2026 12:22:15] Usuário: admin | 👁️ Ocultou: 33 | Arquivo: teste_2026.jpg
+[17/02/2026 12:22:17] Usuário: admin | 👁️ Exibiu: Teste video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 12:22:27] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:28:22] Usuário: admin | 👁️ Ocultou: Teste video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[17/02/2026 12:28:30] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:35:13] Usuário: admin | 👁️ Exibiu: 3 | Arquivo: 955059.jpg
+[17/02/2026 12:35:13] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:38:56] Usuário: admin | 🚀 Mídia enviada | carro | Arquivo: 2_1.png
+[17/02/2026 12:38:58] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[17/02/2026 12:39:06] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:39:18] Usuário: admin | 🚀 Mídia enviada | carro2 | Arquivo: 2_2.png
+[17/02/2026 12:39:23] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[17/02/2026 12:39:48] Usuário: admin | 🚀 Mídia enviada | carro3 | Arquivo: 2_3.png
+[17/02/2026 12:39:49] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[17/02/2026 12:40:08] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:40:12] Usuário: admin | 🗑️ EXCLUSÃO: teste_2026.jpg | O arquivo teste_2026.jpg foi removido do mural.
+[17/02/2026 12:40:16] Usuário: admin | 🗑️ EXCLUSÃO: 709974.jpg | O arquivo 709974.jpg foi removido do mural.
+[17/02/2026 12:40:20] Usuário: admin | 🗑️ EXCLUSÃO: BigSurTakeII_Mac.jpg | O arquivo BigSurTakeII_Mac.jpg foi removido do mural.
+[17/02/2026 12:40:25] Usuário: admin | 🗑️ EXCLUSÃO: 2_3.png | O arquivo 2_3.png foi removido do mural.
+[17/02/2026 12:40:28] Usuário: admin | 🗑️ EXCLUSÃO: 2_2.png | O arquivo 2_2.png foi removido do mural.
+[17/02/2026 12:40:30] Usuário: admin | 🗑️ EXCLUSÃO: 2_1.png | O arquivo 2_1.png foi removido do mural.
+[17/02/2026 12:40:38] Usuário: admin | 🚀 Mídia enviada | carro1 | Arquivo: 2_1.png
+[17/02/2026 12:40:39] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[17/02/2026 12:40:50] Usuário: admin | 👁️ Ocultou: carro1 | Arquivo: 2_1.png
+[17/02/2026 12:40:51] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 12:41:38] Usuário: admin | 🚀 Mídia enviada | carro2 | Arquivo: 2_2.png
+[17/02/2026 12:41:40] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[17/02/2026 22:22:55] Usuário: Sistema | FALHA LOGIN | User: admin
+[17/02/2026 22:23:02] Usuário: admin | ✅ Login realizado
+[17/02/2026 22:23:42] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[17/02/2026 22:23:45] Usuário: admin | 🗑️ EXCLUSÃO: 2_1.png | O arquivo 2_1.png foi removido do mural.
+[17/02/2026 22:23:46] Usuário: admin | 🗑️ EXCLUSÃO: 2_2.png | O arquivo 2_2.png foi removido do mural.
+[17/02/2026 22:23:48] Usuário: admin | 🗑️ EXCLUSÃO: Rancho_Cucamonga_NoTree_16.png | O arquivo Rancho_Cucamonga_NoTree_16.png foi removido do mural.
+[17/02/2026 22:23:51] Usuário: admin | 🗑️ EXCLUSÃO: Dr.Stone_ScienceFuture_-_S04E10.mp4 | O arquivo Dr.Stone_ScienceFuture_-_S04E10.mp4 foi removido do mural.
+[17/02/2026 22:36:46] Usuário: admin | 🚀 Mídia enviada | Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[17/02/2026 22:36:56] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 00:23:34] Usuário: admin | 🚀 Mídia enviada | sd | Arquivo: BigSurTakeII_Mac.jpg
+[18/02/2026 00:23:54] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 00:38:53] Usuário: admin | ✅ Login realizado
+[18/02/2026 01:18:42] Usuário: admin | ✅ Login realizado
+[18/02/2026 01:38:05] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 02:00:06] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 02:00:24] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 02:13:18] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 02:19:33] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 02:19:43] Usuário: admin | 🚀 Mídia enviada | Mario | Arquivo: video1.mp4
+[18/02/2026 02:19:55] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 02:30:26] Usuário: admin | ⚠️ Tentativa de upload inválido | beyond-horizons-201654.mp3
+[18/02/2026 02:30:43] Usuário: admin | 🚀 Mídia enviada | dfd | Arquivo: 709974.jpg
+[18/02/2026 02:30:47] Usuário: admin | 🚀 Mídia enviada | sd | Arquivo: BigSurTakeII_Mac.jpg
+[18/02/2026 02:30:52] Usuário: admin | 🚀 Mídia enviada | sd | Arquivo: 1330226.jpeg
+[18/02/2026 11:12:09] Usuário: admin | ✅ Login realizado
+[18/02/2026 11:12:23] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[18/02/2026 11:12:28] Usuário: admin | 🗑️ EXCLUSÃO: BigSurTakeII_Mac.jpg | O arquivo BigSurTakeII_Mac.jpg foi removido do mural.
+[18/02/2026 11:12:30] Usuário: admin | 🗑️ EXCLUSÃO: 709974.jpg | O arquivo 709974.jpg foi removido do mural.
+[18/02/2026 11:12:34] Usuário: admin | 🗑️ EXCLUSÃO: 1330226.jpeg | O arquivo 1330226.jpeg foi removido do mural.
+[18/02/2026 11:12:38] Usuário: admin | 🗑️ EXCLUSÃO: 955059.jpg | O arquivo 955059.jpg foi removido do mural.
+[18/02/2026 11:13:09] Usuário: admin | 🚀 Mídia enviada | Zeruda | Arquivo: 955059.jpg
+[18/02/2026 11:13:26] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 11:13:39] Usuário: admin | 👁️ Ocultou: Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 11:13:40] Usuário: admin | 👁️ Exibiu: Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 11:15:43] Usuário: admin | 👁️ Ocultou: Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 11:15:44] Usuário: admin | 👁️ Exibiu: Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 11:27:45] Usuário: admin | 👁️ Ocultou: Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 11:27:47] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 11:27:50] Usuário: admin | 👁️ Exibiu: Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 11:27:51] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 11:36:44] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → Zeruda 2
+[18/02/2026 11:45:11] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → Zeruda 2026
+[18/02/2026 11:45:11] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → Zeruda 2026
+[18/02/2026 11:45:23] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → Zeruda 205
+[18/02/2026 11:45:23] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → Zeruda 205
+[18/02/2026 11:54:13] Usuário: admin | ✏️ Legenda alterada | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg → Mac OS 2005
+[18/02/2026 11:54:13] Usuário: admin | ✏️ Legenda alterada | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg → Mac OS 2005
+[18/02/2026 11:54:31] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → sdsd
+[18/02/2026 11:54:31] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → sdsd
+[18/02/2026 12:01:15] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → Zeruda
+[18/02/2026 12:02:40] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → Zeruda 2026
+[18/02/2026 12:17:16] Usuário: admin | 🩻 Usuário apagado com sucesso | Usuário: Isadora Costa | ID: 2
+[18/02/2026 12:17:41] Usuário: admin | 👥 Novo usuário criado | O usuário 'Isadora Costa' foi adicionado ao sistema com ID 3.
+[18/02/2026 12:17:52] Usuário: Isadora Costa | ✅ Login realizado
+[18/02/2026 12:18:38] Usuário: Isadora Costa | 🚀 Mídia enviada | Cucano | Arquivo: Rancho_Cucamonga_Tree_16.png
+[18/02/2026 12:21:05] Usuário: Isadora Costa | ✏️ Legenda alterada | Arquivo: Rancho_Cucamonga_Tree_16.png → Cucano 2026
+[18/02/2026 12:21:11] Usuário: Isadora Costa | ⏱️ Tempo alterado: Cucano 2026 | Arquivo: Rancho_Cucamonga_Tree_16.png | Novo tempo: 10s
+[18/02/2026 12:21:57] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 12:23:19] Usuário: Isadora Costa | ⏱️ Tempo alterado: Mac OS 2005 | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | Novo tempo: 5s
+[18/02/2026 12:23:23] Usuário: Isadora Costa | ⏱️ Tempo alterado: Cucano 2026 | Arquivo: Rancho_Cucamonga_Tree_16.png | Novo tempo: 3s
+[18/02/2026 12:23:28] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:24:17] Usuário: Isadora Costa | ⏱️ Tempo alterado: Cucano 2026 | Arquivo: Rancho_Cucamonga_Tree_16.png | Novo tempo: 5s
+[18/02/2026 12:24:27] Usuário: Isadora Costa | ⏱️ Tempo alterado: Zeruda 2026 | Arquivo: 955059.jpg | Novo tempo: 5s
+[18/02/2026 12:25:05] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:25:15] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:25:54] Usuário: Isadora Costa | 🚀 Mídia enviada | Moises | Arquivo: aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg
+[18/02/2026 12:26:05] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 12:26:13] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:26:13] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:26:29] Usuário: Isadora Costa | 🗑️ EXCLUSÃO: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | O arquivo macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg foi removido do mural.
+[18/02/2026 12:26:39] Usuário: Isadora Costa | 🗑️ EXCLUSÃO: 955059.jpg | O arquivo 955059.jpg foi removido do mural.
+[18/02/2026 12:27:04] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:27:13] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:27:20] Usuário: Isadora Costa | 👁️ Ocultou: Cucano 2026 | Arquivo: Rancho_Cucamonga_Tree_16.png
+[18/02/2026 12:27:33] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:27:40] Usuário: Isadora Costa | 👁️ Exibiu: Cucano 2026 | Arquivo: Rancho_Cucamonga_Tree_16.png
+[18/02/2026 12:27:41] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:28:01] Usuário: Isadora Costa | ACESSO NEGADO | Tentativa em: /usuarios
+[18/02/2026 12:28:15] Usuário: Isadora Costa | ACESSO NEGADO | Tentativa em: /configuracoes
+[18/02/2026 12:28:41] Usuário: Isadora Costa | ACESSO NEGADO | Tentativa em: /logs
+[18/02/2026 12:28:49] Usuário: Isadora Costa | ACESSO NEGADO | Tentativa em: /auditoria
+[18/02/2026 12:30:11] Usuário: admin | 🔑 Senha resetada | Usuário: Isadora Costa | ID: 3 - Senha padrão '123456' aplicada.
+[18/02/2026 12:30:18] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:30:21] Usuário: Isadora Costa | 🚪 Saiu do sistema
+[18/02/2026 12:30:29] Usuário: Isadora Costa | ✅ Login realizado
+[18/02/2026 12:30:49] Usuário: Isadora Costa | 🔐 Senha obrigatória alterada | O usuário definiu sua própria senha após o reset.
+[18/02/2026 12:31:01] Usuário: admin | 🩻 Usuário apagado com sucesso | Usuário: Isadora Costa | ID: 3
+[18/02/2026 12:32:20] Usuário: admin | 👥 Novo usuário criado | O usuário 'Isadora Costa' foi adicionado ao sistema com ID 4.
+[18/02/2026 12:32:34] Usuário: Isadora Costa | ✅ Login realizado
+[18/02/2026 12:32:43] Usuário: Isadora Costa | ❌ACESSO NEGADO | Tentativa em: /auditoria
+[18/02/2026 12:41:49] Usuário: Isadora Costa | ❌ACESSO NEGADO | Tentativa em: /auditoria
+[18/02/2026 12:45:16] Usuário: Isadora Costa | ❌ACESSO NEGADO | Tentativa em: /auditoria
+[18/02/2026 12:45:17] Usuário: Isadora Costa | ❌ACESSO NEGADO | Tentativa em: /auditoria
+[18/02/2026 12:45:29] Usuário: Isadora Costa | ❌ACESSO NEGADO | Tentativa em: /logs
+[18/02/2026 12:46:26] Usuário: admin | Atualizou os Configurações do Mural | Nome: Mural Digital EANIG / Tempo: 2500
+[18/02/2026 12:46:49] Usuário: admin | 🚨 BACKUP DO BANCO | O administrador baixou o arquivo: mural.db
+[18/02/2026 12:47:49] Usuário: Isadora Costa | 🚀 Mídia enviada | Video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[18/02/2026 12:48:01] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 12:50:35] Usuário: Isadora Costa | 🚀 Mídia enviada | Picas | Arquivo: BigSurTakeII_Mac.jpg
+[18/02/2026 12:50:41] Usuário: Isadora Costa | ✏️ Legenda alterada | Arquivo: BigSurTakeII_Mac.jpg → Picaso
+[18/02/2026 12:50:44] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 12:50:54] Usuário: Isadora Costa | ❌ ERRO ao deletar: Dr.Stone_ScienceFuture_-_S04E10.mp4 | [WinError 32] O arquivo já está sendo usado por outro processo: 'static/uploads\\Dr.Stone_ScienceFuture_-_S04E10.mp4'
+[18/02/2026 12:51:03] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:51:31] Usuário: Isadora Costa | 🚀 Mídia enviada | Video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[18/02/2026 12:51:34] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 12:51:54] Usuário: Isadora Costa | 👁️ Ocultou: Video Grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[18/02/2026 12:51:56] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:52:12] Usuário: Isadora Costa | 🗑️ EXCLUSÃO: Dr.Stone_ScienceFuture_-_S04E10.mp4 | O arquivo Dr.Stone_ScienceFuture_-_S04E10.mp4 foi removido do mural.
+[18/02/2026 12:52:15] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:53:25] Usuário: Isadora Costa | 🚀 Mídia enviada | Teste Video grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[18/02/2026 12:53:29] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 12:53:40] Usuário: Isadora Costa | 👁️ Ocultou: Teste Video grande | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[18/02/2026 12:53:41] Usuário: Isadora Costa | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 12:53:47] Usuário: Isadora Costa | 🗑️ EXCLUSÃO: Dr.Stone_ScienceFuture_-_S04E10.mp4 | O arquivo Dr.Stone_ScienceFuture_-_S04E10.mp4 foi removido do mural.
+[18/02/2026 12:58:34] Usuário: admin | ✅ Login realizado
+[18/02/2026 12:58:48] Usuário: admin | 🚀 Mídia enviada | Marioro | Arquivo: video1.mp4
+[18/02/2026 12:58:51] Usuário: admin | 👁️ Ocultou: Marioro | Arquivo: video1.mp4
+[18/02/2026 13:39:43] Usuário: admin | 👁️ Exibiu: Marioro | Arquivo: video1.mp4
+[18/02/2026 13:39:46] Usuário: admin | 👁️ Ocultou: Marioro | Arquivo: video1.mp4
+[18/02/2026 13:39:48] Usuário: admin | 👁️ Exibiu: Marioro | Arquivo: video1.mp4
+[18/02/2026 13:39:50] Usuário: admin | 👁️ Ocultou: Marioro | Arquivo: video1.mp4
+[18/02/2026 13:39:53] Usuário: admin | 👁️ Exibiu: Marioro | Arquivo: video1.mp4
+[18/02/2026 13:40:03] Usuário: admin | 👁️ Ocultou: Marioro | Arquivo: video1.mp4
+[18/02/2026 13:40:16] Usuário: admin | 👁️ Exibiu: Marioro | Arquivo: video1.mp4
+[18/02/2026 13:40:24] Usuário: admin | 👁️ Ocultou: Marioro | Arquivo: video1.mp4
+[18/02/2026 13:40:34] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[18/02/2026 13:40:41] Usuário: admin | 🚀 Mídia enviada | Mario | Arquivo: video1.mp4
+[18/02/2026 13:41:37] Usuário: admin | 👁️ Ocultou: Mario | Arquivo: video1.mp4
+[18/02/2026 13:41:39] Usuário: admin | 📄 DOWNLOAD LOG TXT | O administrador baixou o arquivo: historico_logs.txt
+[18/02/2026 13:41:44] Usuário: admin | 👁️ Exibiu: Mario | Arquivo: video1.mp4
+[18/02/2026 13:41:51] Usuário: admin | 👁️ Ocultou: Mario | Arquivo: video1.mp4
+[18/02/2026 13:41:58] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[18/02/2026 13:44:58] Usuário: admin | 🚀 Mídia enviada | ads | Arquivo: video1.mp4
+[18/02/2026 13:45:01] Usuário: admin | 👁️ Ocultou: ads | Arquivo: video1.mp4
+[18/02/2026 13:45:04] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[18/02/2026 13:51:30] Usuário: admin | 🚀 Mídia enviada | Mario | Arquivo: video1.mp4
+[18/02/2026 13:51:34] Usuário: admin | 👁️ Ocultou: Mario | Arquivo: video1.mp4
+[18/02/2026 13:51:36] Usuário: admin | 🗑️ EXCLUSÃO: video1.mp4 | O arquivo video1.mp4 foi removido do mural.
+[18/02/2026 13:54:42] Usuário: admin | 🚀 Mídia enviada | dd | Arquivo: teste_2026.jpg
+[18/02/2026 13:54:57] Usuário: admin | 🚀 Mídia enviada | teste | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[18/02/2026 13:55:11] Usuário: admin | 🚀 Mídia enviada | dfd | Arquivo: 453417807_899303708891626_1561466812433921589_n.jpg
+[18/02/2026 13:55:17] Usuário: admin | 🗑️ EXCLUSÃO: 453417807_899303708891626_1561466812433921589_n.jpg | O arquivo 453417807_899303708891626_1561466812433921589_n.jpg foi removido do mural.
+[18/02/2026 13:55:19] Usuário: admin | 👁️ Ocultou: teste | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[18/02/2026 13:55:21] Usuário: admin | 🗑️ EXCLUSÃO: Dr.Stone_ScienceFuture_-_S04E10.mp4 | O arquivo Dr.Stone_ScienceFuture_-_S04E10.mp4 foi removido do mural.
+[18/02/2026 13:55:24] Usuário: admin | 🗑️ EXCLUSÃO: teste_2026.jpg | O arquivo teste_2026.jpg foi removido do mural.
+[18/02/2026 13:56:42] Usuário: admin | 🚀 Mídia enviada | meme | Arquivo: 491449006_665845396088159_2679321635918198832_n.jpg
+[18/02/2026 13:56:49] Usuário: admin | 🗑️ EXCLUSÃO: 491449006_665845396088159_2679321635918198832_n.jpg | O arquivo 491449006_665845396088159_2679321635918198832_n.jpg foi removido do mural.
+[18/02/2026 13:59:24] Usuário: admin | 🚀 Mídia enviada | teste | Arquivo: 453417807_899303708891626_1561466812433921589_n.jpg
+[18/02/2026 13:59:40] Usuário: admin | 🚀 Mídia enviada | sdsd | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[18/02/2026 13:59:43] Usuário: admin | 👁️ Ocultou: sdsd | Arquivo: Dr.Stone_ScienceFuture_-_S04E10.mp4
+[18/02/2026 13:59:46] Usuário: admin | 🗑️ EXCLUSÃO: Dr.Stone_ScienceFuture_-_S04E10.mp4 | O arquivo Dr.Stone_ScienceFuture_-_S04E10.mp4 foi removido do mural.
+[18/02/2026 13:59:53] Usuário: admin | 🗑️ EXCLUSÃO: 453417807_899303708891626_1561466812433921589_n.jpg | O arquivo 453417807_899303708891626_1561466812433921589_n.jpg foi removido do mural.
+[18/02/2026 13:59:59] Usuário: admin | 🚀 Mídia enviada | df | Arquivo: teste_2026.jpg
+[18/02/2026 14:00:02] Usuário: admin | ⏱️ Tempo alterado: df | Arquivo: teste_2026.jpg | Novo tempo: 15s
+[18/02/2026 14:06:12] Usuário: admin | 🚀 Mídia enviada | sss | Arquivo: aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg
+[18/02/2026 14:06:15] Usuário: admin | 🗑️ EXCLUSÃO: 709974.jpg | O arquivo 709974.jpg foi removido do mural.
+[18/02/2026 14:06:17] Usuário: admin | 🗑️ EXCLUSÃO: teste_2026.jpg | O arquivo teste_2026.jpg foi removido do mural.
+[18/02/2026 14:06:19] Usuário: admin | 🗑️ EXCLUSÃO: aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg | O arquivo aprendizado-do-povo-de-Israel-no-deserto-mostrando-uma-figura-solitaria-olhando-para-o-horizonte_-_1024x585_1.jpeg foi removido do mural.
+[18/02/2026 14:06:21] Usuário: admin | 🗑️ EXCLUSÃO: 955059.jpg | O arquivo 955059.jpg foi removido do mural.
+[18/02/2026 14:06:24] Usuário: admin | 🗑️ EXCLUSÃO: LionwithCypresses_Mac.jpg | O arquivo LionwithCypresses_Mac.jpg foi removido do mural.
+[18/02/2026 14:07:38] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 14:07:53] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 14:07:59] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 14:08:11] Usuário: admin | 🚀 Mídia enviada | 22 | Arquivo: LionwithCypresses_Mac.jpg
+[18/02/2026 14:08:13] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 14:08:19] Usuário: admin | 🗑️ EXCLUSÃO: LionwithCypresses_Mac.jpg | O arquivo LionwithCypresses_Mac.jpg foi removido do mural.
+[18/02/2026 14:08:20] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 14:10:43] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 14:22:34] Usuário: admin | 🚀 Mídia enviada | ss | Arquivo: 1330226.jpeg | Tempo: 10s
+[18/02/2026 14:22:44] Usuário: admin | 🗑️ EXCLUSÃO: 709974.jpg | O arquivo 709974.jpg foi removido do mural.
+[18/02/2026 14:22:46] Usuário: admin | 🗑️ EXCLUSÃO: BigSurTakeII_Mac.jpg | O arquivo BigSurTakeII_Mac.jpg foi removido do mural.
+[18/02/2026 14:22:47] Usuário: admin | 🗑️ EXCLUSÃO: Rancho_Cucamonga_Tree_16.png | O arquivo Rancho_Cucamonga_Tree_16.png foi removido do mural.
+[18/02/2026 14:22:50] Usuário: admin | 🗑️ EXCLUSÃO: 1330226.jpeg | O arquivo 1330226.jpeg foi removido do mural.
+[18/02/2026 14:22:52] Usuário: admin | 🗑️ EXCLUSÃO: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | O arquivo macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg foi removido do mural.
+[18/02/2026 14:23:08] Usuário: admin | 🚀 Mídia enviada | zeruda | Arquivo: 955059.jpg | Tempo: 10s
+[18/02/2026 14:23:10] Usuário: admin | ⏱️ Tempo alterado: zeruda | Arquivo: 955059.jpg | Novo tempo: 10s
+[18/02/2026 14:23:11] Usuário: admin | 👁️ Ocultou: zeruda | Arquivo: 955059.jpg
+[18/02/2026 14:27:56] Usuário: admin | 👁️ Exibiu: zeruda | Arquivo: 955059.jpg
+[18/02/2026 14:28:00] Usuário: admin | ⏱️ Tempo alterado: zeruda | Arquivo: 955059.jpg | Novo tempo: 10s
+[18/02/2026 14:28:03] Usuário: admin | ⏱️ Tempo alterado: zeruda | Arquivo: 955059.jpg | Novo tempo: 10s
+[18/02/2026 14:28:07] Usuário: admin | ⏱️ Tempo alterado: zeruda | Arquivo: 955059.jpg | Novo tempo: 10s
+[18/02/2026 14:32:37] Usuário: admin | ⏱️ Tempo alterado: zeruda | Arquivo: 955059.jpg | Novo tempo: 10s
+[18/02/2026 14:51:36] Usuário: admin | ⏱️ Tempo alterado: zeruda | Arquivo: 955059.jpg | Novo tempo: 10s
+[18/02/2026 14:51:43] Usuário: admin | 🗑️ EXCLUSÃO: 955059.jpg | O arquivo 955059.jpg foi removido do mural.
+[18/02/2026 14:51:48] Usuário: admin | 🚀 Mídia enviada | ss | Arquivo: 709974.jpg | Tempo: 10s
+[18/02/2026 15:06:23] Usuário: admin | ⏱️ Tempo alterado: ss | Arquivo: 709974.jpg | Novo tempo: 10s
+[18/02/2026 15:16:20] Usuário: admin | ⏱️ Tempo alterado: ss | Arquivo: 709974.jpg | Novo tempo: 10s
+[18/02/2026 15:19:40] Usuário: admin | ⏱️ Tempo alterado: ss | Arquivo: 709974.jpg | Novo tempo: 10s
+[18/02/2026 15:19:42] Usuário: admin | 🗑️ Exclusão | 709974.jpg
+[18/02/2026 15:21:06] Usuário: admin | 🚀 Mídia enviada | Zeruda | Arquivo: 955059.jpg | Tempo: 10s
+[18/02/2026 15:21:12] Usuário: admin | ✏️ Legenda alterada | Arquivo: 955059.jpg → Zeruda 2026
+[18/02/2026 15:21:16] Usuário: admin | ⏱️ Tempo alterado: Zeruda 2026 | Arquivo: 955059.jpg | Novo tempo: 25s
+[18/02/2026 15:21:19] Usuário: admin | ⏱️ Tempo alterado: Zeruda 2026 | Arquivo: 955059.jpg | Novo tempo: 26s
+[18/02/2026 15:21:24] Usuário: admin | 🗑️ Exclusão | 955059.jpg
+[18/02/2026 15:21:49] Usuário: admin | 🚀 Mídia enviada | Zeruda | Arquivo: 709974.jpg | Tempo: 10s
+[18/02/2026 15:22:03] Usuário: admin | 🚀 Mídia enviada | Zeruda 2 | Arquivo: 955059.jpg | Tempo: 2s
+[18/02/2026 15:22:07] Usuário: admin | ⏱️ Tempo alterado: Zeruda | Arquivo: 709974.jpg | Novo tempo: 2s
+[18/02/2026 15:22:08] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 15:22:24] Usuário: admin | ⏱️ Tempo alterado: Zeruda | Arquivo: 709974.jpg | Novo tempo: 2s
+[18/02/2026 15:22:26] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:22:58] Usuário: admin | 🗑️ Exclusão | 709974.jpg
+[18/02/2026 15:23:25] Usuário: admin | 🚀 Mídia enviada | Zeruda 3 | Arquivo: 709974.jpg | Tempo: 2s
+[18/02/2026 15:23:28] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 15:23:49] Usuário: admin | ⏱️ Tempo alterado: Zeruda 2 | Arquivo: 955059.jpg | Novo tempo: 3s
+[18/02/2026 15:23:50] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:24:05] Usuário: admin | ⏱️ Tempo alterado: Zeruda 3 | Arquivo: 709974.jpg | Novo tempo: 3s
+[18/02/2026 15:24:06] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:26:05] Usuário: admin | 🕹️ Toggle de Exibição: OCULTO | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:26:18] Usuário: admin | 🕹️ Toggle de Exibição: EXIBINDO | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:28:29] Usuário: admin | Zeruda 2 OCULTO | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:28:30] Usuário: admin | Zeruda 2 EXIBINDO | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:33:36] Usuário: admin |  OCULTO: Zeruda 2  | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:33:37] Usuário: admin |  EXIBINDO: Zeruda 2  | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:36:41] Usuário: admin |  🫣OCULTOU: Zeruda 2  | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:36:42] Usuário: admin |  👀EXIBINDO: Zeruda 2  | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:37:52] Usuário: admin |  🫣OCULTOU: Zeruda 2  | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:37:53] Usuário: admin |  👀EXIBINDO: Zeruda 2  | Legenda: Zeruda 2 | Arquivo: 955059.jpg
+[18/02/2026 15:42:15] Usuário: admin | Atualizou os Configurações do Mural | Nome: Mural Digital EANIG / Tempo: 1500
+[18/02/2026 15:43:07] Usuário: admin | Atualizou os Configurações do Mural | Nome: Mural Digital EANIG / Tempo: 1500
+[18/02/2026 15:43:38] Usuário: admin | ⚙️Atualizou os Configurações do Mural | Nome: Mural Digital EANIG / Tempo: 1500
+[18/02/2026 15:44:12] Usuário: admin | 🗑️ Exclusão | 955059.jpg
+[18/02/2026 15:44:13] Usuário: admin | 🗑️ Exclusão | 709974.jpg
+[18/02/2026 15:44:25] Usuário: admin | 🚀 Mídia enviada | Imagem Teste A | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | Tempo: 7s
+[18/02/2026 15:45:14] Usuário: admin | ✏️ Legenda alterada | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg → Imagem Teste A - Editada
+[18/02/2026 15:45:39] Usuário: admin | ⏱️ Tempo alterado: Imagem Teste A - Editada | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | Novo tempo: 12s
+[18/02/2026 15:45:53] Usuário: admin |  🫣OCULTOU: Imagem Teste A - Editada  | Legenda: Imagem Teste A - Editada | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 15:45:53] Usuário: admin |  👀EXIBINDO: Imagem Teste A - Editada  | Legenda: Imagem Teste A - Editada | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 15:45:55] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 15:46:05] Usuário: admin | 🗑️ Exclusão | macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 15:46:06] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:46:18] Usuário: admin | 🚀 Mídia enviada | Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | Tempo: 12s
+[18/02/2026 15:46:19] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 15:46:42] Usuário: admin | 🚀 Mídia enviada | Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4 | Tempo: 10s
+[18/02/2026 15:46:44] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:46:47] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:46:48] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:46:49] Usuário: admin | 🔄 Atualização Solicitada | Nova mídia enviada
+[18/02/2026 15:47:11] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:47:13] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:47:56] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:48:04] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:48:54] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:57:37] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:57:40] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:57:41] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:57:41] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:57:42] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:15] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:15] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:19] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:23] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:23] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:24] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:25] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:53] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:53] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:54] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:54] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:55] Usuário: admin |  👀EXIBINDO: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:56] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:58:58] Usuário: admin |  🫣OCULTOU: Teste Video  | Legenda: Teste Video | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 15:58:59] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:59:00] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:59:01] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:59:02] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:59:02] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:59:05] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 15:59:05] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:10] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:11] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:11] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:11] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:12] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:54] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:55] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:56] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:56] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:56] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:56] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:56] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:57] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:57] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:03:59] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:05:41] Usuário: admin | 🚀 Mídia enviada | ss | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4 | Tempo: 10s
+[18/02/2026 16:05:59] Usuário: admin | ✏️ Legenda alterada | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4 → ddd
+[18/02/2026 16:14:04] Usuário: admin |  👀EXIBINDO: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:14:05] Usuário: admin |  🫣OCULTOU: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:14:08] Usuário: admin |  👀EXIBINDO: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:14:09] Usuário: admin |  🫣OCULTOU: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:14:10] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:14:12] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:14:16] Usuário: admin |  👀EXIBINDO: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:14:20] Usuário: admin |  🫣OCULTOU: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:14:24] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:14:27] Usuário: admin | ⏱️ Tempo alterado: Mac OS | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg | Novo tempo: 12s
+[18/02/2026 16:14:32] Usuário: admin | ✏️ Legenda alterada | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg → Mac OS 2
+[18/02/2026 16:16:14] Usuário: admin |  👀EXIBINDO: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:15] Usuário: admin |  🫣OCULTOU: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:18] Usuário: admin |  👀EXIBINDO: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:19] Usuário: admin |  🫣OCULTOU: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:19] Usuário: admin |  👀EXIBINDO: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:20] Usuário: admin |  🫣OCULTOU: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:29] Usuário: admin |  🫣OCULTOU: Mac OS 2  | Legenda: Mac OS 2 | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 16:16:29] Usuário: admin |  👀EXIBINDO: Mac OS 2  | Legenda: Mac OS 2 | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 16:16:29] Usuário: admin |  🫣OCULTOU: Mac OS 2  | Legenda: Mac OS 2 | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 16:16:30] Usuário: admin |  👀EXIBINDO: Mac OS 2  | Legenda: Mac OS 2 | Arquivo: macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg
+[18/02/2026 16:16:32] Usuário: admin |  👀EXIBINDO: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:40] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:16:41] Usuário: admin |  🫣OCULTOU: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:44] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[18/02/2026 16:16:51] Usuário: admin |  👀EXIBINDO: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:52] Usuário: admin |  🫣OCULTOU: ddd  | Legenda: ddd | Arquivo: monado-xenoblade-chronicles-moewalls-com.mp4
+[18/02/2026 16:16:56] Usuário: admin | 🔄 Atualização Solicitada | Mudança de ordem ou ocultação
+[23/08/2026 02:07:44] Usuário: admin: 🚪 Saiu do sistema (INFO)
+[23/08/2026 02:07:48] Usuário: admin: ✅ Login realizado (INFO)
+[23/08/2026 02:09:04] Usuário: admin: 🚪 Saiu do sistema (INFO)
+[23/08/2026 02:09:35] Usuário: admin: ✅ Login realizado (INFO)
+[23/08/2026 02:12:21] Usuário: admin:  🫣OCULTOU: Rio in Power  (INFO)
+[23/08/2026 02:12:23] Usuário: admin: 🔄 Atualização Solicitada (INFO)
+[23/08/2026 02:12:25] Usuário: admin:  👀EXIBINDO: Rio in Power  (INFO)
+[23/08/2026 02:12:26] Usuário: admin: 🔄 Atualização Solicitada (INFO)
+[23/08/2026 21:01:46] Usuário: admin: ✅ Login realizado (INFO)
+[23/08/2026 21:02:38] Usuário: admin: 👥 Novo usuário criado (SUCCESS)
+[23/08/2026 21:02:49] Usuário: admin: 🚪 Saiu do sistema (INFO)
+[23/08/2026 21:02:55] Usuário: Sistema: FALHA LOGIN (WARNING)
+[23/08/2026 21:03:00] Usuário: Isadora.costa: ✅ Login realizado (INFO)

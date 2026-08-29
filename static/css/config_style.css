@@ -1,0 +1,105 @@
+/* Estilos Exclusivos da Página de Configurações */
+:root { 
+    --primary: #2c3e50; 
+    --secondary: #f39c12; 
+    --success: #27ae60; 
+    --bg: #f4f7f6; 
+}
+
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    background: var(--bg); 
+    margin: 0; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container { 
+    max-width: 800px; 
+    margin: auto; 
+    flex: 0.1px; /* Empurra o footer para baixo */
+    width: 100%;
+}
+
+.card { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    margin-bottom: 20px; 
+    border-left: 5px solid var(--secondary); 
+}
+
+h2 { color: var(--primary); }
+h3 { color: var(--primary); margin-top: 0; display: flex; align-items: center; gap: 10px; }
+
+.form-group { margin-bottom: 15px; }
+label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
+
+input[type="text"], input[type="number"] { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 6px; 
+    box-sizing: border-box; 
+}
+
+.btn-salvar { 
+    background: var(--primary); 
+    color: white; 
+    border: none; 
+    padding: 12px 25px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: 0.3s; 
+}
+
+.btn-salvar:hover { background: #1a252f; }
+
+.btn-backup { 
+    background: var(--success); 
+    color: white; 
+    text-decoration: none; 
+    padding: 12px 20px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 10px; 
+    transition: 0.3s; 
+}
+
+.db-info { 
+    background: #e8f4fd; 
+    padding: 15px; 
+    border-radius: 8px; 
+    border: 1px solid #d1e9f9; 
+    font-size: 14px; 
+    color: #2c3e50; 
+    line-height: 1.6; 
+}
+
+.voltar { 
+	text-decoration: none; 
+	color: var(--primary); 
+	font-weight: bold; 
+	display: inline-block; 
+	margin-bottom: 20px; 
+}
+
+/* REGRAS DO FOOTER PARA CENTRALIZAR E FICAR OPACO */
+.version-footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0.7 !important; /* Opacidade que você quer */
+}
+
+.version-footer p {
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+}

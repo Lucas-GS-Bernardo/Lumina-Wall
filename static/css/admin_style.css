@@ -1,0 +1,1620 @@
+:root { 
+    --primary: #3498db; 
+    --primary-dark: #2980b9;
+    --secondary: #2c3e50; 
+    --bg: #eceff1;
+    --gray-light: #f1f2f6;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --white: #ffffff;
+    --border: #dddddd;
+}
+
+* {
+    box-sizing: border-box; /* Aplica a regra para TODOS os elementos do site */
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f0f2f5; 
+    padding: 0; 
+    margin: 0; 
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o fundo cubra a tela toda */
+}
+
+.container { 
+    width: 90%;
+    max-width: 1100px; /* Aumentado para telas grandes */
+    margin-top: 30px !important; /* Dá um espaço para o menu "respirar" */
+    margin: 20px auto !important; 
+    background: var(--white); 
+    padding: 40px; 
+    border-radius: 8px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+	box-sizing: border-box;
+	flex: 1; /* Isso faz o container ocupar o espaço e empurrar o footer */
+}
+
+body-title { 
+			font-family: sans-serif; 
+			background: #f4f7f6; 
+			padding: 20px; 
+			margin: 0; 
+			max-width: 800px;
+}
+
+.container-title { 
+			max-width: 1100px; 
+            margin: 20px auto;
+            border-radius: 15px;
+}
+
+.voltar { 
+	text-decoration: none; 
+	color: #000000; 
+	font-weight: bold; 
+	display: inline-block; 
+	margin-bottom: 20px; 
+}
+
+h2-title { 
+			border-bottom: 1px solid #ddd; 
+			padding-bottom: 10px;     
+			display: block;
+			font-size: 1.5em;
+			margin-block-start: 0.83em;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+			font-weight: bold;
+			unicode-bidi: isolate;
+			color: #333; 
+}
+
+.header-box h1 { 
+margin: 0; 
+color: var(--secondary); 
+font-size: 45px; 
+}
+
+.header-box {
+    display: flex;
+	flex-wrap: wrap; /* Permite quebrar linha */
+    justify-content: space-between; /* Título na esquerda, botões na direita */
+    align-items: center;
+	gap: 15px;
+    background-color: #f8f8f8;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border-left: 8px solid #ff7702;
+    margin-bottom: 25px;
+}
+
+.header-actions {
+    display: flex;
+    flex-direction: column; /* EMPILHA OS BOTÕES UM ACIMA DO OUTRO */
+    gap: 10px;             /* Espaço entre os botões */
+    min-width: 250px;      /* Garante um tamanho padrão para os botões */
+}
+
+/* Grid do Formulário de Upload */
+.upload-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    align-items: flex-end;
+}
+
+/* Ajuste nos botões para ocuparem a mesma largura na coluna */
+.btn-sync, .btn-view {
+    width: 100%;
+    margin: 0 !important;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+	.container {
+        width: 100%;     /* No celular, ele ocupa a tela toda */
+        margin: 0;       /* Remove as margens de "papel" */
+        padding: 20px;   /* Reduz o respiro interno para caber mais coisa */
+        border-radius: 0;/* Remove arredondamento para parecer um app */
+    }
+	
+    .header-box {
+        flex-direction: column; /* No celular, título em cima e botões embaixo */
+        text-align: center;
+        gap: 20px;
+    }
+	
+	.header-info {
+        align-items: center; /* Centraliza o título no celular */
+    }
+
+    .header-actions {
+    display: flex;       /* Correto */
+    gap: 10px;
+    align-items: center; /* Correto */
+    flex-wrap: wrap;     /* Garante que os botões não sumam no celular */
+    justify-content: flex-end; /* Alinha os botões à direita, oposto ao título */
+	width: 100%; /* Botões ocupam a largura toda no celular */
+	}
+
+    /* Ajuste do Formulário de Upload */
+    .upload-section form {
+        display: flex !important;
+        flex-direction: column !important; /* Tudo vira uma coluna só */
+        gap: 15px;
+    }
+
+    .upload-section form div {
+        width: 100%;
+    }
+
+    .upload-section form input {
+        width: 100% !important; /* Garante que o input preencha a tela */
+        box-sizing: border-box;
+    }
+
+    .upload-section form button {
+        width: 100%;
+        padding: 15px; /* Botão maior para facilitar o toque */
+    }
+}
+
+.upload-section { 
+    background-color: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 8px; 
+    border: 1px solid var(--border); 
+    margin-bottom: 25px; 
+}
+
+.status-badge { 
+    font-weight: bold; 
+    padding: 6px 14px; 
+    border-radius: 15px; 
+    font-size: 13px; 
+    margin-right: 10px;
+    background-color: #e8f5e9;
+    display: inline-block;
+}
+
+/* Isso faz os cards ficarem lado a lado */
+.grid { 
+    display: grid !important; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important; 
+    gap: 20px !important; 
+    width: 100% !important;
+    align-items: stretch;
+}
+
+/* Isso é o que acontece DENTRO de cada card */
+.card { 
+    background: var(--white); 
+    border: 1px solid var(--border); 
+    border-radius: 10px; 
+    padding: 15px; 
+    display: flex; 
+    flex-direction: column; /* Mantém o conteúdo do card um em cima do outro */
+    justify-content: min-height;
+}
+
+.card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+.preview-box { width: 100%; height: 130px; background: #000; border-radius: 6px; overflow: hidden; }
+.preview-box img, .preview-box video { width: 100%; height: 100%; object-fit: cover; }
+
+/* Ajuste para o input de tempo dentro do card */
+.card input[type="number"] {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 4px;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.card button[type="submit"]:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+.btn { 
+    text-align: center; text-decoration: none; padding: 10px; border-radius: 6px; 
+    font-weight: bold; font-size: 12px; color: var(--white); border: none; cursor: pointer; margin-top: 8px;
+    transition: opacity 0.2s;
+}
+
+.btn-primary { background-color: var(--primary); }
+.btn-toggle-on { background-color: #16bb21; }
+.btn-toggle-off { background-color: #95a5a6; }
+.btn-delete { background-color: var(--danger); }
+
+input[type="text"], input[type="number"], input[type="password"] { padding: 8px; border: 1px solid var(--border); border-radius: 4px; }
+
+/* Badge de tipo de mídia no topo do card */
+/* Badge de tipo de mídia no topo do card - v0.6.2 Atualizado */
+.media-type-badge {
+    font-size: 14px;             /* Aumentado de 10px para 14px */
+    font-weight: 800;            /* Texto extra negrito */
+    text-align: center;
+    padding: 10px 4px;           /* Mais espaço interno (respiro) */
+    background-color: #d8d8d8;    /* Fundo escuro para contraste */
+    color: #000000;              /* Texto branco para leitura fácil */
+    border-radius: 5px 5px 0 0;
+    margin: -15px -15px 12px -15px; 
+    border-bottom: 2px solid #ff7702; /* Linha azul de destaque */
+    text-transform: uppercase;   /* Força letras maiúsculas */
+    letter-spacing: 1px;         /* Espaçamento entre letras profissional */
+}
+
+/* Container que une a caixa de texto e o botão */
+/* Container do formulário dentro do card */
+.duration-form {
+    display: flex !important;
+    flex-direction: column !important;
+    border: 1.5px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    margin: 10px 0;
+    background: #fff;
+}
+
+/* Alinhamento perfeito do número */
+.duration-form input[type="number"], 
+.duration-form input[type="text"] {
+    width: 100% !important;
+    height: 45px !important; /* Altura fixa para evitar desalinhamento */
+    line-height: 45px !important; /* Centraliza o texto verticalmente */
+    border: none !important;
+    text-align: center !important;
+    font-size: 22px !important; /* Número grande e legível */
+    font-weight: 800 !important;
+    color: var(--secondary) !important;
+    background: transparent !important;
+    outline: none !important;
+    padding: 0 !important; /* Remove paddings que empurram o número */
+}
+
+/* Badge Moderna para Vídeos (Duração Automática) */
+.btn-info-large {
+    background: #f1f5f9 !important;
+    color: #64748b !important;
+    padding: 12px !important;
+    border-radius: 10px !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    border: 1px dashed #cbd5e0 !important;
+    margin: 10px 0;
+}
+
+/* Adiciona um ícone sutil antes do texto via CSS se quiser */
+.btn-info-large::before {
+    content: "🎞️";
+    font-size: 14px;
+}
+
+/* Estilo do botão de salvar para combinar */
+.btn-save-simple {
+    background: var(--primary) !important;
+    height: 40px !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    cursor: pointer !important;
+    transition: 0.3s !important;
+}
+
+/* Ajuste para o texto "segundos" se você usar no HTML */
+.duration-unit-label {
+    font-size: 10px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    background: #fdfdfd;
+    padding-bottom: 5px;
+}
+
+/* Aviso para vídeos (para manter o mesmo tamanho) */
+.video-badge-simple {
+    width: 100%;
+    background-color: #f1f2f6;
+    color: #7f8c8d;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px dashed var(--border);
+}
+
+/* Badge de Vídeo (Estilo Glassmorphism leve) */
+.video-auto-badge {
+    background: #f1f2f6;
+    color: #7f8c8d;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px dashed #bdc3c7;
+    margin: 10px 0;
+}
+
+/* Container de estatísticas */
+.stats-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+/* Estilos para os Cards de Estatísticas */ /* Card estático com fundo cinza leve */
+.stat-card {
+    background-color: #f8f9fa !important; /* Cinza bem leve */
+    padding: 5px 5px 5px 5px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.4s ease; /* Para o brilho entrar suavemente */
+	box-shadow: 0 4px 6px rgba(0,0,0,0.02); /* Sombra padrão leve */
+}
+
+/* Garante que ao passar o mouse nada aconteça */
+.stat-card:hover {
+    transform: none !important;
+    background-color: #f1f3f5 !important; /* Opcional: apenas escurece um tiquinho o cinza */
+    box-shadow: none !important;
+}
+
+/* Estado de Alerta (Passou do limite) */
+.stat-card.limit-exceeded {
+    background-color: rgba(255, 0, 0, 0.03) !important;
+    animation: aura-vermelha 2s infinite ease-in-out;
+    transform: none !important; /* Remove o aumento de tamanho se isso o fizer parecer clicável */
+    pointer-events: none;
+}
+
+.stat-card.limit-exceeded .stat-value,
+.stat-card.limit-exceeded .stat-label,
+.stat-card.limit-exceeded .stat-icon {
+    color: #e11d48 !important; /* Texto em tons de vermelho */
+}
+
+@keyframes aura-vermelha {
+	0% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.4); border-color: rgba(255, 0, 0, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 35px rgba(255, 0, 0, 0.4); border-color: rgba(255, 0, 0, 1); }
+    100% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.4); border-color: rgba(255, 0, 0, 0.3); }
+}
+
+.stat-icon {
+    font-size: 24px;
+    background: var(--gray-light);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.upload-form-grid input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px; /* Altura padrão para todos os inputs */
+}
+
+/* Ajuste Mobile para o Formulário */
+@media (max-width: 900px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr; /* Vira coluna única no celular */
+    }
+    .form-group { width: 100% !important; }
+}
+
+/* --- ESTILIZAÇÃO MODERNA DO UPLOAD --- */
+
+.upload-section {
+    background-color: #f8f9fa; /* Off-white solicitado */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 35px;
+}
+
+.upload-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.upload-header h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.upload-icon {
+    font-size: 25px;
+}
+
+/* O container principal do formulário */
+.upload-form-grid {
+    display: grid;
+    /* Divide em 3 colunas iguais no desktop, mas se ajusta no mobile */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: end; /* Alinha o botão pela base dos campos */
+    justify-content: center;
+    width: 100%;
+}
+
+/* Garante que cada grupo de input esteja centralizado e não estique demais */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 2px;
+}
+
+/* INPUTS CUSTOMIZADOS */
+.upload-form-grid input {
+    width: 100%;
+    height: 45px; /* Altura padrão para UX */
+    padding: 10px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--white);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Estilo especial para o input de arquivo */
+input[type="file"] {
+    padding: 8px; /* Ajuste para não cortar o texto do navegador */
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* BOTÃO ENVIAR (Estilo Pill/Ver Mural) */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    color: white !important;
+    height: 45px !important;
+    border: none !important;
+    border-radius: 8px !important; /* Totalmente arredondado */
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease !important;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* AJUSTE RESPONSIVO (Fundamental para UX Mobile) */
+@media (max-width: 1024px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
+    .upload-section {
+        padding: 20px;
+    }
+}
+
+/* --- ESTILIZAÇÃO MODERNA DO UPLOAD --- */
+
+.upload-section {
+    background-color: #f8f9fa; /* Off-white solicitado */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 35px;
+}
+
+.upload-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.upload-header h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.upload-icon {
+    font-size: 20px;
+}
+
+/* GRID DO FORMULÁRIO - Proporção 2:2:1:1 aproximadamente */
+.upload-form-grid {
+    display: grid;
+    /* Divide em até 3 colunas de tamanhos iguais */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    align-items: end; /* Alinha os campos pela base */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* INPUTS CUSTOMIZADOS */
+.upload-form-grid input {
+    width: 100%;
+    height: 45px; /* Altura padrão para UX */
+    padding: 10px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--white);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Estilo especial para o input de arquivo */
+input[type="file"] {
+    padding: 8px; /* Ajuste para não cortar o texto do navegador */
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* BOTÃO ENVIAR (Estilo Pill/Ver Mural) */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    color: white !important;
+    height: 45px !important;
+    border: none !important;
+    border-radius: 8px !important; /* Totalmente arredondado */
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease !important;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+    filter: brightness(1.05);
+}
+
+/* AJUSTE RESPONSIVO (Fundamental para UX Mobile) */
+@media (max-width: 1024px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
+    .upload-section {
+        padding: 20px;
+    }
+}
+
+/* Esconde o input original (que é o que cresce) */
+#arquivo {
+    display: none;
+}
+
+/* Estilo da caixa "Escolher Arquivo" */
+/* Estilo Base da Caixa */
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px; /* Altura fixa para alinhar com os inputs */
+    padding: 10px;
+    cursor: pointer;
+    background-color: #e0e0e0; /* Cinza claro */
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    width: 100%; /* Ocupa a coluna do grid */
+	max-width: 250px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+	
+    /* Prevenção de quebra de layout */
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+
+
+.custom-file-upload:active {
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+/* Estado: Quando o arquivo é selecionado (Fundo Azul) */
+.custom-file-upload.file-selected {
+    background-color: #3498db !important;
+    color: white !important;
+    border-color: #2980b9 !important;
+}
+
+.custom-file-upload:hover {
+    background-color: #e65c00;
+}
+
+/* Span interno para controlar o texto do nome do arquivo */
+.file-text {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Coloca os ... dentro do botão */
+    text-align: center;
+	vertical-align: middle;
+}
+
+#file-name-display {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: #ef5331; /* Cor de destaque para o nome */
+    font-weight: bold;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Mantendo a proporção do Grid */
+.upload-form-grid {
+    display: flex;
+    grid-template-columns: 1.5fr 1.5fr 100px;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+/* Garante que os grupos de input ocupem apenas 1 coluna cada */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Restante dos inputs para manter a simetria */
+.upload-form-grid input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--white);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* O SEGREDO: Faz o botão ocupar as 3 colunas (de um lado ao outro) */
+.btn-container {
+    grid-column: 1 / -1; /* Força o botão a ir da coluna 1 até a última */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Estilo do Botão para ele não encolher */
+.btn-primary {
+    width: 100% !important; /* Ocupa 100% da btn-container (que já é 100% do grid) */
+    padding: 15px !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #f39c12; /* Cor de exemplo laranja */
+    color: white;
+}
+
+/* Marca de campo obrigatório */
+.required-mark {
+    color: var(--danger);
+    margin-left: 2px;
+}
+
+/* Feedback visual para quando o campo estiver vazio e for focado */
+input:invalid:focus {
+    border-color: var(--danger);
+}
+
+/* Garante que o input de legenda tenha a mesma altura e estilo dos outros */
+#legenda {
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Container do formulário de usuários */
+.user-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Padronização de todos os inputs e selects */
+.user-form-grid input, 
+.user-form-grid select {
+    width: 100%;
+    height: 45px !important; /* Altura fixa idêntica para todos */
+    padding: 0 15px !important; /* Padding horizontal igual */
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--white);
+    box-sizing: border-box; /* Impede que o campo cresça com o padding */
+    margin: 0;
+}
+
+/* Estilo moderno para o campo de Cargo */
+.user-form-grid select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 14px;
+}
+
+/* Botão ocupando a linha de baixo e centralizado */
+.full-width-btn {
+    grid-column: 1 / -1; /* Ocupa as 3 colunas */
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.full-width-btn .btn-primary {
+    max-width: 400px; /* Largura elegante para o botão */
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/* Ajuste para quando o Tempo sumir (Vídeo selecionado) */
+/* Quando o tempo some, queremos que Mídia e Legenda ocupem o espaço */
+@media (min-width: 768px) {
+    /* Se o tempo sumir, a legenda e a mídia se ajustam */
+    .upload-form-grid:has(#containerTempo[style*="display: none"]) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Imagem da logo */
+.brand-img {
+  /* Define uma largura fixa ou máxima */
+  width: 580px; /* Altere para o tamanho desejado */
+  
+  /* OBRIGATÓRIO: Mantém a proporção baseada na largura */
+  height: auto !important; 
+
+  /* Opcional: Garante que a imagem nunca ultrapasse o contêiner */
+  max-width: 100%;
+}
+
+
+.header-info {
+    display: flex;
+    flex-direction: column; /* Nome em cima, versão embaixo */
+    align-items: flex-start;
+    gap: 12px; 
+}
+
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+* Badge de versão já existe no HTML — aqui garantimos estilo consistente */
+.header-info .version {
+  font-size: .85rem;
+  color: #6b7280;          /* cinza suave */
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Acessibilidade: esconder visualmente mas manter para leitores de tela */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+/* (Opcional) ajuste para telas pequenas */
+@media (max-width: 480px) {
+  .brand-img { height: 30px; }
+  .header-info .version { font-size: .8rem; }
+}
+
+
+
+/* Estilo para o botão de Sincronizar (Laranja) */
+.btn-sync {
+    background: #ff7702;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    min-width: 220px;
+}
+
+/* Estilo para o botão Ver Mural (Azul) */
+.btn-view {
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    min-width: 220px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    /* GRADIENTE: Branco sutil no topo descendo para um cinza azulado moderno */
+    background: linear-gradient(to bottom, #ffffff 5%, #e1e1e1 100%);
+    
+    /* BORDA: Uma linha fina embaixo para dar peso, em vez do laranja sólido */
+    border-bottom: 3px solid #ff7702;
+    
+    /* CENTRALIZAÇÃO DO BLOCO */
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+    /* CANTOS ARREDONDADOS: Mais suaves e elegantes */
+    border-radius: 0 0 10px 10px;
+    
+    /* SOMBRA GOSTOSA: Multi-camadas para parecer que o menu flutua */
+    box-shadow: 
+        0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+        0 4px 6px -2px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8); /* Brilho na quina superior interna */
+    
+    /* AJUSTES INTERNOS */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    
+    /* POSICIONAMENTO */
+    position: relative;
+    z-index: 100;
+}
+
+/* Garante que o conteúdo dentro do menu não precise de outro container */
+.menu-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-style2 {
+  $btn-color: #dd7e2a;
+  $btn-hover-color: #b5c952;
+  border-color: $btn-color;
+  color: $btn-color;
+  &:hover {
+    box-shadow: 0 0.25em 0.25em -0.1em $btn-hover-color;
+    transform: translateY(-0.25em);
+    border-color: $btn-hover-color;
+    color: $btn-hover-color;
+  }
+}
+
+
+.click-btn {
+  display: flex;
+  width: $button-width;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  line-height: 35px;
+  border: 1px solid;
+  border-radius: $border-radius;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.35s;
+  box-sizing: border-box;
+}
+
+
+
+.menu-links {
+    color: #334155 !important; /* Cinza grafite moderno */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.menu-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.menu-links a:hover {
+    background: rgba(0, 0, 0, 0.05); /* Efeito sutil ao passar o mouse */
+    color: var(--primary) !important; /* Azul primário no hover */
+}
+
+.user-info {
+    color: #475569 !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-logout {
+    color: #e74c3c !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-return-dark {
+	text-decoration: none; color: #2c3e50; 
+	font-weight: bold; 
+	display: inline-block; 
+	margin-top: 20px;
+}
+
+/* Botão Principal (Azul - Geralmente o 'Enviar' ou 'Salvar') */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    color: white !important;
+    border: none !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Botão de Voltar / Secundário (Cinza Elegante ou Cor de sua preferência) */
+.btn-secondary, .btn-back {
+    background-color: #7f8c8d !important; /* Cinza clássico */
+    color: white !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover, .btn-back:hover {
+    background-color: #95a5a6 !important;
+}
+
+/* Botão de Excluir (Vermelho) */
+.btn-danger {
+    background-color: var(--danger) !important;
+    color: white !important;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+<style>
+/* Fundo do Modal (Overlay) */
+.modal-overlay {
+    display: none; /* Começa escondido */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fundo preto transparente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque ao fundo */
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Caixa Branca do Modal */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    animation: entrance 0.3s ease-out;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn-cancel {
+    background: #bdc3c7;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-confirm {
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.modal-overlay {
+            display: none; 
+            position: fixed; 
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @keyframes entrance {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+.version-footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0.7 !important; /* Opacidade que você quer */
+}
+
+.version-footer p {
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* CONTAINER PRINCIPAL DO MODAL */
+.modal-guia {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; /* Garante que fique acima de tudo */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+    backdrop-filter: blur(4px); /* Efeito de vidro embaçado atrás */
+}
+
+/* CAIXA DE CONTEÚDO */
+.modal-content-guia {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 550px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden; /* Para o header não sair da borda arredondada */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: animarEntrada 0.3s ease-out;
+}
+
+
+.modal-guia.aberto {
+  display: block;
+}
+
+
+@keyframes animarEntrada {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* CABEÇALHO DO POP-UP */
+.modal-header-guia {
+    background-color: #e67e22; /* Laranja voltado para atenção/guia */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-header-guia h2 {
+    margin: 0;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+/* CORPO DO TEXTO */
+.modal-body-guia {
+    padding: 25px;
+    color: #333;
+    max-height: 70vh; /* Limita altura se o texto crescer */
+    overflow-y: auto; /* Adiciona scroll se necessário */
+}
+
+.guia-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.guia-item:last-child { border-bottom: none; }
+
+.guia-item h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+/* ÍCONES NOS TÍTULOS */
+.icon-negativo { color: #e74c3c; margin-right: 10px; }
+.icon-positivo { color: #27ae60; margin-right: 10px; }
+
+.guia-item ul {
+    margin: 5px 0;
+    padding-left: 20px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* BOTÃO FECHAR */
+.close-guia-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+    transition: 0.2s;
+}
+
+.close-guia-btn:hover { color: #f39c12; }
+
+/* RODAPÉ DO MODAL */
+.modal-footer-guia {
+    background: #f9f9f9;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.85em;
+    color: #7f8c8d;
+}
+
+.container-btn-guia {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9998; /* Um pouco abaixo do modal, mas acima de todo o resto */
+}
+
+.btn-ajuda-flutuante {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.btn-ajuda-flutuante:hover {
+    transform: scale(1.05);
+    background-color: #d35400;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    z-index: 900;
+}
+
+
+@keyframes guia-slide-up {
+  from { transform: translateY(12px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+
+.icon-livro {
+    font-size: 20px;
+}
+
+
+#lista-mural .card {
+  -webkit-user-drag: none;
+}
+
+/* Evita seleção de texto ao arrastar */
+#lista-mural .card {
+  user-select: none;
+}
+
+/* --- REORDENAÇÃO: toolbar e controles por card --- */
+.reorder-toolbar{
+  display:flex; gap:10px; margin:12px 0 20px 0;
+}
+
+#lista-mural .card { user-select: none; }
+
+
+/* Controles flutuantes por card */
+.reorder-controls{
+  position:absolute; top:8px; right:8px;
+  display:flex; align-items:center; gap:6px;
+  background:rgba(255,255,255,0.92);
+  border:1px solid var(--border);
+  border-radius:8px; padding:4px 6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  z-index:2;
+}
+.reorder-controls .icon-btn{
+  width:26px; height:26px;
+  border:1px solid #cfd8dc; border-radius:6px;
+  background:#f7fafc; color:#334155; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer;
+}
+.reorder-controls .icon-btn:disabled{ opacity:.4; cursor:not-allowed; }
+
+.pos-badge{
+  min-width:24px; text-align:center; font-weight:800;
+  color:#0f172a; background:#e2e8f0;
+  border-radius:6px; padding:2px 6px; font-size:12px;
+}
+
+/* Em modo reordenação, desativa cliques em botões internos dos cards (exibir/ocultar/excluir, salvar tempo) */
+.reorder-active #lista-mural .btn,
+.reorder-active #lista-mural a.btn,
+.reorder-active #lista-mural button[type="submit"],
+.reorder-active #lista-mural form {
+  pointer-events:none; opacity:.6;
+}
+/* Mas mantém os botões de mover ativos */
+.reorder-active #lista-mural .reorder-controls,
+.reorder-active #lista-mural .reorder-controls * {
+  pointer-events:auto; opacity:1;
+}
+
+/* --- REORDENAÇÃO POR NÚMERO --- */
+.reorder-toolbar{
+  display:flex; gap:10px; margin:12px 0 20px 0;
+}
+#lista-mural .card { user-select: none; }
+
+.reorder-active #lista-mural .btn,
+.reorder-active #lista-mural a.btn,
+.reorder-active #lista-mural button[type="submit"],
+.reorder-active #lista-mural form {
+  pointer-events:none; opacity:.6;
+}
+
+/* Os controles de posição continuam clicáveis no modo reordenar */
+.reorder-active #lista-mural .reorder-number,
+.reorder-active #lista-mural .reorder-number * {
+  pointer-events:auto; opacity:1;
+}
+
+/* Caixa flutuante com o seletor numérico no topo direito de cada card */
+.reorder-number{
+  position:absolute; top:8px; right:8px;
+  display:flex; align-items:center; gap:6px;
+  background:rgba(255,255,255,0.95);
+  border:1px solid var(--border);
+  border-radius:8px; padding:5px 8px;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  z-index:2;
+}
+.reorder-number .pos-label{
+  font-size:12px; font-weight:700; color:#334155;
+}
+.reorder-number select.pos-input{
+  height:28px; min-width:58px;
+  border:1px solid #cfd8dc; border-radius:6px;
+  background:#f7fafc; color:#0f172a; font-weight:800;
+  text-align:center; cursor:pointer;
+}
+.reorder-number select.pos-input.error{
+  border-color:#e74c3c; background:#fdecea;
+}
+
+/* Realce visual sutil no card quando em reordenação */
+.reorder-active #lista-mural .card{
+  outline:1px dashed #cbd5e0;
+}
+
+/* --- REORDENAÇÃO POR NÚMERO --- */
+.reorder-toolbar{
+  display:flex; gap:10px; margin:12px 0 20px 0;
+}
+
+.hidden { display:none !important; }
+
+#lista-mural .card { user-select: none; }
+
+/* Em modo reordenação, desativa os cliques nos botões internos dos cards,
+   exceto os controles de posição */
+.reorder-active #lista-mural .btn,
+.reorder-active #lista-mural a.btn,
+.reorder-active #lista-mural button[type="submit"],
+.reorder-active #lista-mural form {
+  pointer-events:none; opacity:.6;
+}
+.reorder-active #lista-mural .reorder-number,
+.reorder-active #lista-mural .reorder-number * {
+  pointer-events:auto; opacity:1;
+}
+
+/* Caixa do seletor numérico (canto superior direito do card) */
+.reorder-number{
+  position:absolute; top:8px; right:8px;
+  display:flex; align-items:center; gap:6px;
+  background:rgba(255,255,255,0.95);
+  border:1px solid var(--border);
+  border-radius:8px; padding:5px 8px;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  z-index:2;
+}
+.reorder-number .pos-label{
+  font-size:12px; font-weight:700; color:#334155;
+}
+.reorder-number select.pos-input{
+  height:28px; min-width:58px;
+  border:1px solid #cfd8dc; border-radius:6px;
+  background:#f7fafc; color:#0f172a; font-weight:800;
+  text-align:center; cursor:pointer;
+}
+
+/* Realce rápido nos dois cards que acabaram de trocar de número */
+.swap-flash {
+  animation: swapBlink 600ms ease-in-out 1;
+}
+@keyframes swapBlink {
+  0%   { box-shadow:0 0 0 0 rgba(52,152,219,.0); }
+  40%  { box-shadow:0 0 0 4px rgba(52,152,219,.35); }
+  100% { box-shadow:0 0 0 0 rgba(52,152,219,.0); }
+}
+
+/* Delineia os cards durante o modo reordenar */
+.reorder-active #lista-mural .card{
+  outline:1px dashed #cbd5e0;
+}
+
+/* --- Edição inline de legenda --- */
+
+.legend-inline{
+  display:inline-block;
+  padding:2px 6px;
+  border-radius:6px;
+  cursor:text;
+  transition: background .12s, box-shadow .12s;
+}
+
+.legend-inline:hover{
+  background:#f1f5f9;
+  box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+
+.legend-edit-input{
+  display:inline-block;
+  padding:4px 8px;
+  border:1px solid #cfd8dc;
+  border-radius:6px;
+  font: inherit;
+  background:#ffffff;
+  width:100%;
+  max-width:340px;
+}
+
+
+/* Campo de edição “inline” */
+.legend-input-inline{
+  display:inline-block;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
+  height:auto;
+  line-height:1.3;
+  padding:4px 8px;
+  border:1px solid #cfd8dc;
+  border-radius:6px;
+  outline:none;
+  background:#fff;
+  font: inherit;              /* usa mesma fonte/tamanho do contexto */
+}
+.legend-input-inline:focus{
+  box-shadow:0 0 0 3px rgba(52,152,219,.15);
+  border-color:#3498db;
+}
+
+
+.legend-edit-input:focus{
+  outline:none;
+  border-color:#3498db;
+  box-shadow:0 0 0 3px rgba(52,152,219,.15);
+}
+
+.reorder-active .legend-inline{
+  pointer-events:none;
+  opacity:.5;
+}
+
+.btn-disabled {
+  opacity: .55 !important;
+  cursor: not-allowed !important;
+  filter: grayscale(.2);
+}
+
+/* === Overlay de upload com barra de progresso === */
+.upload-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.55);
+  display: none; /* abre via JS */
+  align-items: center; justify-content: center;
+  z-index: 99999;
+  backdrop-filter: blur(2px);
+}
+
+.upload-box {
+  width: min(520px, 92vw);
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px 18px;
+  box-shadow: 0 10px 32px rgba(0,0,0,.25);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.upload-title {
+  margin: 0 0 6px 0;
+  font-size: 16px; font-weight: 800; color: #334155;
+}
+
+.upload-sub {
+  margin: 0 0 14px 0;
+  font-size: 12px; color: #64748b;
+}
+
+.progress-wrap {
+  background: #e2e8f0;
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+  transition: width .15s linear;
+}
+
+.progress-info {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-top: 8px; font-size: 12px; color: #475569;
+}
+
+.progress-pct { font-weight: 800; color: #0f172a; }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança - Definir Nova Senha</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/reset_password_style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🔒</div>
+        <h2>Sua senha foi resetada</h2>
+        <p>Por segurança, você precisa definir uma nova senha pessoal antes de acessar o mural.</p>
+        
+        <form action="{{ url_for('processar_troca_obrigatoria') }}" method="POST">
+            <div class="input-group">
+                <label>Nova Senha:</label>
+                <input type="password" name="nova_senha" placeholder="Mínimo 4 caracteres" required minlength="4">
+            </div>
+            <div class="input-group">
+                <label>Confirmar Nova Senha:</label>
+                <input type="password" name="confirmacao" placeholder="Repita a senha" required>
+            </div>
+            <button type="submit">Salvar e Acessar Sistema</button>
+        </form>
+    </div>
+	
+	{% include 'footer.html' %}
+	
+</body>
+</html>

@@ -1,0 +1,109 @@
+:root {
+            --primary: #2c3e50;
+            --info: #2980b9;
+            --warning: #f39c12;
+            --critical: #c0392b;
+        }
+        body { background: #f4f7f6; font-family: 'Segoe UI', sans-serif; margin: 0; }
+        .container { padding: 30px; }
+        
+        /* Cabeçalho da Auditoria */
+        .audit-header { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        /* Tabela de Logs */
+        .log-table-container {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        td { padding: 12px 15px; border-bottom: 1px solid #eee; font-size: 14px; }
+        
+        /* Estilo das Linhas */
+        tr:hover { background-color: #f9f9f9; }
+        
+        /* Badges de Severidade */
+        .badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .ip-addr { font-family: monospace; color: #7f8c8d; font-size: 12px; }
+        .user-tag { font-weight: 600; color: var(--primary); }
+        
+        .btn-back {
+            text-decoration: none;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn-back:hover { opacity: 0.8; }
+		
+		.user-tag {
+			background-color: #e3f2fd;
+			color: #0d47a1;
+			padding: 2px 8px;
+			border-radius: 12px;
+			font-weight: bold;
+			font-size: 0.9em;
+		}
+
+		.badge {
+			padding: 5px 10px;
+			border-radius: 4px;
+			color: white;
+			font-size: 0.8em;
+			font-weight: bold;
+		}
+
+		.bg-info { background-color: #17a2b8; }
+		.bg-warning { background-color: #fbce00;}
+		.bg-danger { background-color: #cb2737; }
+		.bg-success { background-color: green; color: white; }
+
+		.ip-addr {
+			font-family: monospace;
+			font-size: 0.9em;
+		}
+		
+		.btn-download {
+			background-color: #27ae60;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+			font-weight: bold;
+			transition: background 0.3s;
+			display: inline-flex;
+			align-items: center;
+		}
+		
+		.version-footer {
+			width: 100%;
+			text-align: center;
+			padding: 10px 0;
+			opacity: 0.7 !important; /* Opacidade que você quer */
+		}
+
+		.version-footer p {
+			margin: 0;
+			font-size: 11px;
+			letter-spacing: 1px;
+		}

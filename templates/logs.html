@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 Logs do Sistema</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/logs_style.css') }}">
+</head>
+<body>
+
+<div class="container-title">
+<a href="/admin" class="voltar">⬅ Voltar ao Painel</a>
+	<h2>📜 Registros de Atividade</h2>
+</div>
+
+<div class="container">
+
+	<div class="card">
+
+		<div style="margin-bottom: 20px; padding: 10px; background: #eee; border-radius: 5px; display: flex; justify-content: space-between; align-items: center;">
+			<span>📂 Opções de Registro:</span>
+			<div>
+				<a href="{{ url_for('central_downloads', arquivo='historico_logs.txt') }}" class="btn btn-txt">📥 Baixar TXT</a>
+				{% if session['user_id'] == 1 %}
+				<a href="{{ url_for('exibir_auditoria_detalhada') }}" class="btn btn-audit">🛡️ Auditoria Completa</a>
+				{% endif %}
+			</div>
+		</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th width="20%">🕒 Data/Hora</th>
+					<th width="20%">👤 Usuário</th>
+					<th width="60%">📝 Ação / Detalhes</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for log in logs %}
+				<tr>
+					<td>{{ log.data_hora }}</td>
+					<td><strong>{{ log.usuario_nome }}</strong></td>
+					<td>{{ log.acao }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{% include 'footer.html' %}
+
+</body>
+</html>

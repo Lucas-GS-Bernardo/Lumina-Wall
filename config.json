@@ -1,0 +1,36 @@
+{
+    "null": {
+        "ativo": true,
+        "ordem": 15
+    },
+    "2 (3).png": {
+        "ativo": true,
+        "ordem": 99,
+        "legenda": "carro1",
+        "tempo": 3
+    },
+    "2 (4).png": {
+        "ativo": true,
+        "ordem": 99,
+        "legenda": "carro",
+        "tempo": 3
+    },
+    "1330226.jpeg": {
+        "ativo": true,
+        "ordem": 99,
+        "legenda": "Pedra",
+        "tempo": 3
+    },
+    "macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-1920x1080-1455.jpg": {
+        "ativo": true,
+        "ordem": 99,
+        "legenda": "Mac",
+        "tempo": 3
+    },
+    "video1.mp4": {
+        "ativo": true,
+        "ordem": 99,
+        "legenda": "Mario",
+        "tempo": 0
+    }
+}

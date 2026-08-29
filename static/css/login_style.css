@@ -1,0 +1,1070 @@
+:root { 
+    --primary: #3498db; 
+    --primary-dark: #2980b9;
+    --secondary: #2c3e50; 
+    --bg: #eceff1;
+    --gray-light: #f1f2f6;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --white: #ffffff;
+    --border: #dddddd;
+}
+
+* {
+    box-sizing: border-box; /* Aplica a regra para TODOS os elementos do site */
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f4f7f6; 
+    padding: 0; 
+    margin: 0; 
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o fundo cubra a tela toda */
+	display:flex; 
+	align-items:center; 
+	justify-content:center; 
+	height:10vh;
+}
+
+.container { 
+    width: 90%;
+    max-width: 400px; /* Aumentado para telas grandes */
+    margin: 25px auto; 
+    background: var(--white); 
+    padding: 8px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	box-sizing: border-box;
+}
+
+.header-box h1 { 
+margin: 0; 
+color: var(--secondary); 
+font-size: 45px; 
+}
+
+.header-box {
+    display: flex;
+	flex-wrap: wrap; /* Permite quebrar linha */
+    justify-content: space-between; /* Título na esquerda, botões na direita */
+    align-items: center;
+	gap: 15px;
+    background-color: #f8f8f8;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border-left: 8px solid #df8d67;
+    margin-bottom: 25px;
+	style="justify-content:center; flex-direction: column; text-align: center;"
+}
+
+.header-actions {
+    display: flex;
+    flex-direction: column; /* EMPILHA OS BOTÕES UM ACIMA DO OUTRO */
+    gap: 10px;             /* Espaço entre os botões */
+    min-width: 250px;      /* Garante um tamanho padrão para os botões */
+}
+
+/* Estilização do Formulário de Login */
+.login-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo para os Labels (USUÁRIO e SENHA) */
+.form-group label {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adicionado um pequeno respiro */
+}
+
+/* Estilo para os Campos de Input */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* Botão de entrar ocupando tudo */
+.btn-block {
+    width: 100%;
+    cursor: pointer;
+}
+
+.error-message {
+    background-color: #fdeaea; /* Fundo vermelho bem clarinho */
+    color: #e74c3c;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Grid do Formulário de Upload */
+.upload-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    align-items: flex-end;
+}
+
+/* Ajuste nos botões para ocuparem a mesma largura na coluna */
+.btn-sync, .btn-view {
+    width: 100%;
+    margin: 0 !important;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+	.container {
+        width: 100%;     /* No celular, ele ocupa a tela toda */
+        margin: 0;       /* Remove as margens de "papel" */
+        padding: 20px;   /* Reduz o respiro interno para caber mais coisa */
+        border-radius: 0;/* Remove arredondamento para parecer um app */
+    }
+	
+    .header-box {
+        flex-direction: column; /* No celular, título em cima e botões embaixo */
+        text-align: center;
+        gap: 20px;
+    }
+	
+	.header-info {
+        align-items: center; /* Centraliza o título no celular */
+    }
+
+    .header-actions {
+    display: flex;       /* Correto */
+    gap: 10px;
+    align-items: center; /* Correto */
+    flex-wrap: wrap;     /* Garante que os botões não sumam no celular */
+    justify-content: flex-end; /* Alinha os botões à direita, oposto ao título */
+	width: 100%; /* Botões ocupam a largura toda no celular */
+	}
+
+    /* Ajuste do Formulário de Upload */
+    .upload-section form {
+        display: flex !important;
+        flex-direction: column !important; /* Tudo vira uma coluna só */
+        gap: 15px;
+    }
+
+    .upload-section form div {
+        width: 100%;
+    }
+
+    .upload-section form input {
+        width: 100% !important; /* Garante que o input preencha a tela */
+        box-sizing: border-box;
+    }
+
+    .upload-section form button {
+        width: 100%;
+        padding: 15px; /* Botão maior para facilitar o toque */
+    }
+}
+
+.upload-section { 
+    background-color: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 8px; 
+    border: 1px solid var(--border); 
+    margin-bottom: 25px; 
+}
+
+.status-badge { 
+    font-weight: bold; 
+    padding: 6px 14px; 
+    border-radius: 15px; 
+    font-size: 13px; 
+    margin-right: 10px;
+    background-color: #e8f5e9;
+    display: inline-block;
+}
+
+/* Isso faz os cards ficarem lado a lado */
+.grid { 
+    display: grid !important; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important; 
+    gap: 20px !important; 
+    width: 100% !important;
+    align-items: stretch;
+}
+
+/* Isso é o que acontece DENTRO de cada card */
+.card { 
+    background: var(--white); 
+    border: 1px solid var(--border); 
+    border-radius: 10px; 
+    padding: 15px; 
+    display: flex; 
+    flex-direction: column; /* Mantém o conteúdo do card um em cima do outro */
+    justify-content: min-height;
+}
+
+.card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.card:active { cursor: grabbing; }
+
+.preview-box { width: 100%; height: 130px; background: #000; border-radius: 6px; overflow: hidden; }
+.preview-box img, .preview-box video { width: 100%; height: 100%; object-fit: cover; }
+
+/* Ajuste para o input de tempo dentro do card */
+.card input[type="number"] {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 4px;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.card button[type="submit"]:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+.btn { 
+    text-align: center; text-decoration: none; padding: 10px; border-radius: 6px; 
+    font-weight: bold; font-size: 12px; color: var(--white); border: none; cursor: pointer; margin-top: 8px;
+    transition: opacity 0.2s;
+}
+
+.btn-primary { background-color: var(--primary); }
+.btn-toggle-on { background-color: var(--success); }
+.btn-toggle-off { background-color: #95a5a6; }
+.btn-delete { background-color: var(--danger); }
+
+.sortable-ghost { opacity: 0.3; background: #e1f5fe; border: 2px dashed var(--primary); }
+
+input[type="text"], input[type="number"], input[type="password"] { padding: 8px; border: 1px solid var(--border); border-radius: 4px; }
+
+/* Badge de tipo de mídia no topo do card */
+/* Badge de tipo de mídia no topo do card - v0.6.2 Atualizado */
+.media-type-badge {
+    font-size: 14px;             /* Aumentado de 10px para 14px */
+    font-weight: 800;            /* Texto extra negrito */
+    text-align: center;
+    padding: 10px 4px;           /* Mais espaço interno (respiro) */
+    background-color: #d8d8d8;    /* Fundo escuro para contraste */
+    color: #000000;              /* Texto branco para leitura fácil */
+    border-radius: 5px 5px 0 0;
+    margin: -15px -15px 12px -15px; 
+    border-bottom: 2px solid var(--primary); /* Linha azul de destaque */
+    text-transform: uppercase;   /* Força letras maiúsculas */
+    letter-spacing: 1px;         /* Espaçamento entre letras profissional */
+}
+
+/* Container que une a caixa de texto e o botão */
+/* Container do formulário dentro do card */
+.duration-form {
+    display: flex !important;
+    flex-direction: column !important;
+    border: 1.5px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    margin: 10px 0;
+    background: #fff;
+}
+
+/* Alinhamento perfeito do número */
+.duration-form input[type="number"], 
+.duration-form input[type="text"] {
+    width: 100% !important;
+    height: 45px !important; /* Altura fixa para evitar desalinhamento */
+    line-height: 45px !important; /* Centraliza o texto verticalmente */
+    border: none !important;
+    text-align: center !important;
+    font-size: 22px !important; /* Número grande e legível */
+    font-weight: 800 !important;
+    color: var(--secondary) !important;
+    background: transparent !important;
+    outline: none !important;
+    padding: 0 !important; /* Remove paddings que empurram o número */
+}
+
+/* Badge Moderna para Vídeos (Duração Automática) */
+.btn-info-large {
+    background: #f1f5f9 !important;
+    color: #64748b !important;
+    padding: 12px !important;
+    border-radius: 10px !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    border: 1px dashed #cbd5e0 !important;
+    margin: 10px 0;
+}
+
+/* Adiciona um ícone sutil antes do texto via CSS se quiser */
+.btn-info-large::before {
+    content: "🎞️";
+    font-size: 14px;
+}
+
+/* Estilo do botão de salvar para combinar */
+.btn-save-simple {
+    background: var(--primary) !important;
+    height: 40px !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    cursor: pointer !important;
+    transition: 0.3s !important;
+}
+
+/* Ajuste para o texto "segundos" se você usar no HTML */
+.duration-unit-label {
+    font-size: 10px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    background: #fdfdfd;
+    padding-bottom: 5px;
+}
+
+/* Aviso para vídeos (para manter o mesmo tamanho) */
+.video-badge-simple {
+    width: 100%;
+    background-color: #f1f2f6;
+    color: #7f8c8d;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px dashed var(--border);
+}
+
+/* Badge de Vídeo (Estilo Glassmorphism leve) */
+.video-auto-badge {
+    background: #f1f2f6;
+    color: #7f8c8d;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px dashed #bdc3c7;
+    margin: 10px 0;
+}
+
+/* Container de estatísticas */
+.stats-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+/* Estilos para os Cards de Estatísticas */ /* Card estático com fundo cinza leve */
+.stat-card {
+    background-color: #f8f9fa !important; /* Cinza bem leve */
+    padding: 5px 5px 5px 5px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: none !important; /* Remove qualquer animação de movimento */
+    transform: none !important;  /* Garante que não pule */
+}
+
+/* Garante que ao passar o mouse nada aconteça */
+.stat-card:hover {
+    transform: none !important;
+    background-color: #f1f3f5 !important; /* Opcional: apenas escurece um tiquinho o cinza */
+    box-shadow: none !important;
+}
+
+/* Estado de Alerta (Passou do limite) */
+.stat-card.limit-exceeded {
+    background-color: #fff1f2 !important; /* Fundo levemente avermelhado */
+    border-color: #f43f5e !important;    /* Borda vermelha */
+    animation: pulse-red 2s infinite;
+}
+
+.stat-card.limit-exceeded .stat-value,
+.stat-card.limit-exceeded .stat-label,
+.stat-card.limit-exceeded .stat-icon {
+    color: #e11d48 !important; /* Texto em tons de vermelho */
+}
+
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(244, 63, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
+}
+
+.stat-icon {
+    font-size: 24px;
+    background: var(--gray-light);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.upload-form-grid input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px; /* Altura padrão para todos os inputs */
+}
+
+/* Ajuste Mobile para o Formulário */
+@media (max-width: 900px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr; /* Vira coluna única no celular */
+    }
+    .form-group { width: 100% !important; }
+}
+
+/* --- ESTILIZAÇÃO MODERNA DO UPLOAD --- */
+
+.upload-section {
+    background-color: #f8f9fa; /* Off-white solicitado */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 35px;
+}
+
+.upload-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.upload-header h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.upload-icon {
+    font-size: 20px;
+}
+
+/* GRID DO FORMULÁRIO - Proporção 2:2:1:1 aproximadamente */
+.upload-form-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 100px 180px; /* Alinhamento horizontal proporcional */
+    gap: 20px;
+    align-items: flex-end; /* Alinha o botão com os campos */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 2px;
+}
+
+/* INPUTS CUSTOMIZADOS */
+.upload-form-grid input {
+    width: 100%;
+    height: 45px; /* Altura padrão para UX */
+    padding: 10px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--white);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Estilo especial para o input de arquivo */
+input[type="file"] {
+    padding: 8px; /* Ajuste para não cortar o texto do navegador */
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* BOTÃO ENVIAR (Estilo Pill/Ver Mural) */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    color: white !important;
+    height: 45px !important;
+    border: none !important;
+    border-radius: 50px !important; /* Totalmente arredondado */
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease !important;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+    filter: brightness(1.05);
+}
+
+/* AJUSTE RESPONSIVO (Fundamental para UX Mobile) */
+@media (max-width: 1024px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
+    .upload-section {
+        padding: 20px;
+    }
+}
+
+/* --- ESTILIZAÇÃO MODERNA DO UPLOAD --- */
+
+.upload-section {
+    background-color: #f8f9fa; /* Off-white solicitado */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 35px;
+}
+
+.upload-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.upload-header h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.upload-icon {
+    font-size: 20px;
+}
+
+/* GRID DO FORMULÁRIO - Proporção 2:2:1:1 aproximadamente */
+.upload-form-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 100px 180px; /* Alinhamento horizontal proporcional */
+    gap: 20px;
+    align-items: flex-end; /* Alinha o botão com os campos */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* INPUTS CUSTOMIZADOS */
+.upload-form-grid input {
+    width: 100%;
+    height: 45px; /* Altura padrão para UX */
+    padding: 10px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--white);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Estilo especial para o input de arquivo */
+input[type="file"] {
+    padding: 8px; /* Ajuste para não cortar o texto do navegador */
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* BOTÃO ENVIAR (Estilo Pill/Ver Mural) */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    color: white !important;
+    height: 45px !important;
+    border: none !important;
+    border-radius: 50px !important; /* Totalmente arredondado */
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease !important;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+    filter: brightness(1.05);
+}
+
+/* AJUSTE RESPONSIVO (Fundamental para UX Mobile) */
+@media (max-width: 1024px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .upload-form-grid {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
+    .upload-section {
+        padding: 20px;
+    }
+}
+
+/* Esconde o input original (que é o que cresce) */
+#arquivo {
+    display: none;
+}
+
+/* Estilo da caixa "Escolher Arquivo" */
+/* Estilo Base da Caixa */
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px; /* Altura fixa para alinhar com os inputs */
+    padding: 0 15px;
+    cursor: pointer;
+    background-color: #e0e0e0; /* Cinza claro */
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    width: 100%; /* Ocupa a coluna do grid */
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    
+    /* Prevenção de quebra de layout */
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+.custom-file-upload:active {
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+/* Estado: Quando o arquivo é selecionado (Fundo Azul) */
+.custom-file-upload.file-selected {
+    background-color: #3498db !important;
+    color: white !important;
+    border-color: #2980b9 !important;
+}
+
+.custom-file-upload:hover {
+    background-color: #e65c00;
+}
+
+/* Span interno para controlar o texto do nome do arquivo */
+.file-text {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Coloca os ... dentro do botão */
+    text-align: center;
+}
+
+#file-name-display {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: #ef5331; /* Cor de destaque para o nome */
+    font-weight: bold;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Mantendo a proporção do Grid */
+.upload-form-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 100px 180px;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Restante dos inputs para manter a simetria */
+.upload-form-grid input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--white);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    color: white !important;
+    height: 45px !important;
+    border: none !important;
+    border-radius: 50px !important;
+    font-weight: 800;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Marca de campo obrigatório */
+.required-mark {
+    color: var(--danger);
+    margin-left: 2px;
+}
+
+/* Feedback visual para quando o campo estiver vazio e for focado */
+input:invalid:focus {
+    border-color: var(--danger);
+}
+
+/* Garante que o input de legenda tenha a mesma altura e estilo dos outros */
+#legenda {
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Container do formulário de usuários */
+.user-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Padronização de todos os inputs e selects */
+.user-form-grid input, 
+.user-form-grid select {
+    width: 100%;
+    height: 45px !important; /* Altura fixa idêntica para todos */
+    padding: 0 15px !important; /* Padding horizontal igual */
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--white);
+    box-sizing: border-box; /* Impede que o campo cresça com o padding */
+    margin: 0;
+}
+
+/* Estilo moderno para o campo de Cargo */
+.user-form-grid select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 14px;
+}
+
+/* Botão ocupando a linha de baixo e centralizado */
+.full-width-btn {
+    grid-column: 1 / -1; /* Ocupa as 3 colunas */
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.full-width-btn .btn-primary {
+    max-width: 400px; /* Largura elegante para o botão */
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .user-form-grid {
+        grid-template-columns: 1fr; /* 1 coluna no mobile */
+    }
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column; /* Nome em cima, versão embaixo */
+    align-items: flex-start;
+}
+
+/* Estilo para o botão de Sincronizar (Laranja) */
+.btn-sync {
+    background: #ef5331;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    min-width: 220px;
+}
+
+/* Estilo para o botão Ver Mural (Azul) */
+.btn-view {
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    min-width: 220px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    background: #2c3e50;
+    border-bottom: 3px solid #f39c12;
+    
+    /* CENTRALIZAÇÃO DO BLOCO */
+    width: 90%;             /* Largura em telas menores */
+    max-width: 1100px;      /* Mesma largura do seu container central */
+    margin: 0 auto;         /* Centraliza o bloco na tela */
+    
+    /* CANTOS ARREDONDADOS INFERIORES */
+    border-radius: 0 0 15px 15px; /* Topo reto, base arredondada */
+    
+    /* AJUSTES INTERNOS */
+    padding: 13px 30px 17px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra para dar profundidade */
+    box-sizing: border-box;
+}
+
+/* Garante que o conteúdo dentro do menu não precise de outro container */
+.menu-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.menu-links a:hover {
+    color: #f39c12;
+}
+
+.user-info {
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-logout {
+    color: #e74c3c !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-return-dark {
+	text-decoration: none; color: #2c3e50; 
+	font-weight: bold; 
+	display: inline-block; 
+	margin-top: 20px;
+}
+
+/* Botão Principal (Azul - Geralmente o 'Enviar' ou 'Salvar') */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    color: white !important;
+    border: none !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Botão de Voltar / Secundário (Cinza Elegante ou Cor de sua preferência) */
+.btn-secondary, .btn-back {
+    background-color: #7f8c8d !important; /* Cinza clássico */
+    color: white !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover, .btn-back:hover {
+    background-color: #95a5a6 !important;
+}
+
+/* Botão de Excluir (Vermelho) */
+.btn-danger {
+    background-color: var(--danger) !important;
+    color: white !important;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+<style>
+/* Fundo do Modal (Overlay) */
+.modal-overlay {
+    display: none; /* Começa escondido */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fundo preto transparente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque ao fundo */
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Caixa Branca do Modal */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    background: #bdc3c7;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-confirm {
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.version-footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0.7 !important; /* Opacidade que você quer */
+}
+
+.version-footer p {
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
